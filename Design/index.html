@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>InstantGaming | Gaming ecommerce website</title>
     <link rel="stylesheet" href="bootstrap5\css\bootstrap.css">
-
+    <link rel="icon" href="favicon.ico"/>
 </head>
 
 <body>
 
-    <!-- Structure -->
+    <!-- Navbar -->
     <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">   
@@ -29,20 +29,20 @@
                                     <li><a class="dropdown-item" href="Console.html" id="GamingConsoleDropdown" role="button" data-toggle="modal" aria-expanded="false">Gaming Console</a></li>
                                         <ul>
                                             
-                                            <a class="dropdown-item" href="#">Playstation</a>
-                                            <a class="dropdown-item" href="#">Xbox</a>
-                                            <a class="dropdown-item" href="#">Nintendo</a>
-                                            <a class="dropdown-item" href="#">Other</a>
+                                            <a class="dropdown-item" href="Console.html#Playstation">Playstation</a>
+                                            <a class="dropdown-item" href="Console.html#Xbox">Xbox</a>
+                                            <a class="dropdown-item" href="Console.html#Nintendo">Nintendo</a>
+                                            <a class="dropdown-item" href="Console.html#Other">Other</a>
                                         
                                         </ul>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="Video-game.html" class="dropdown-toggle" id="VideoGamesDropdown" role="button" data-toggle="modal" aria-expanded="false">Video Games</a></li>
                                         <ul>
                                             
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Adventure</a>
-                                                <a class="dropdown-item" href="#">Baseball</a>
-                                                <a class="dropdown-item" href="#">Basketball</a>
+                                                <a class="dropdown-item" href="Video-game.html#Action">Action</a>
+                                                <a class="dropdown-item" href="Video-game.html#Adventure">Adventure</a>
+                                                <a class="dropdown-item" href="Video-game.html#Battle">Battle</a>
+                                                <a class="dropdown-item" href="Video-game.html#Sport">Sport</a>
                                             
                                         </ul>
                                     
@@ -68,90 +68,90 @@
     </div>     
 
         <!-- Carousel / Slider -->
-    <div class="container"><div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="image1.png" class="d-block w-100" alt="...">
+            <img src="image1.png" class="d-block h-100 w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="image2.jpg" class="d-block w-100" alt="...">
+            <img src="image2.jpg" class="d-block h-100 w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="image3.jpg" class="d-block w-100" alt="...">
+            <img src="image3.jpg" class="d-block h-100 w-100" alt="...">
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        
       </div>
     </div>
 
   <div class="container containerItems pt-4 mt-4">
     <div class="row m-2">
-      <div class="col-md m-3 colItems">1</div>
-      <div class="col-md m-3 colItems">2</div>
-      <div class="col-md m-3 colItems">3</div> 
-    </div>
-    <div class="row m-2">
-      <div class="col-md m-3 colItems">1</div>
-      <div class="col-md m-3 colItems">2</div>
-      <div class="col-md m-3 colItems">3</div> 
+      <div class="col-md m-3">
+        <div class="colItems">
+          <img src="XBOX-SerieX.png" alt="XBOX-SerieX">
+        </div>
+        <div class="productCaption">
+          <h5>XBOX Serie X</h5>
+          <p>700.90$</p>
+        </div>
+      </div>
+      <div class="col-md m-3">
+        <div class="colItems">
+          <img src="PS5.png" alt="PS5">
+        </div>
+        <div class="productCaption">
+          <h5>Playstation 5</h5>
+          <p>699.99$</p>
+        </div>
+      </div>
     </div>
   </div>
 
-    <footer class="bg-dark text-center text-white">
-        <!-- Grid container -->
-        <div class="container p-4 pb-1">
-          <!-- Section: Form -->
-          <section class="">
-            <form action="">
-              <!--Grid row-->
-              <div class="row d-flex justify-content-center">
-                <!--Grid column-->
-                <div class="col-auto">
-                  <p class="pt-2">
-                    <strong>Sign up for our newsletter</strong>
-                  </p>
-                </div>
-                <!--Grid column-->
-      
-                <!--Grid column-->
-                <div class="col-md-4 col-12">
-                  <!-- Email input -->
-                  <div class="form-outline form-white">
-                    <input type="email" id="footerMail" class="form-control" placeholder="Email adress" aria-label="Email addess"></input>
-                  </div>
-                </div>
-                <!--Grid column-->
-      
-                <!--Grid column-->
-                <div class="col-auto">
-                  <!-- Submit button -->
-                  <button type="submit" class="btn btn-outline-primary mb-4">
-                    Subscribe
-                  </button>
-                </div>
-                <!--Grid column-->
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container">
+      <!-- Section: Form -->
+      <section>
+        <form>
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8 col-lg-8 col-md-8 col-sm-12">
+              <!--Grid column-->
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+              <!-- Email input -->
+              <div class="input-group">
+                <input type="email" id="footerMail" class="form-control m-2" placeholder="Email adress"
+                  aria-label="Email addess"></input>
+                <button type="submit" class="btn btn-outline-primary m-2">
+                  Subscribe
+                </button>
               </div>
-              <!--Grid row-->
-            </form>
-          </section>
-          <!-- Section: Form -->
-        </div>
-        <!-- Grid container -->
-      
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.25);">
-          © 2021 Copyright :
-          <a class="text-orange" href="index.html">InstantGaming.com</a>
-        </div>
-        <!-- Copyright -->
-      </footer>
+            </div>
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+    </div>
+    <!-- Grid container -->
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0,1);">
+      © 2021 Copyright :
+      <a class="text-orange" href="index.html">InstantGaming.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
         
   
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
