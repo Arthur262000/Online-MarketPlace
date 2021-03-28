@@ -1,18 +1,17 @@
 <?php
 
 $mysqli = new mysqli("localhost", "root", "", "projet1");
-$query = "";
+$query = "SELECT * from log WHERE login LIKE '% $login %' ;";
 
-$login = $_POST['login'];
-$password = $_POST['password'];
+$search = $_POST['search'];
 
 if(!$mysqli){
     echo"Database Connection Error...".mysqli_connect_error();
 
 } else{
     echo"<h3>Database Connection Success....</h3>";
-    echo "SELECT * from log WHERE login = '$login' AND passw = '$password'";
-    if($result = mysqli_query($mysqli, "SELECT * from log WHERE login = ' $login ' AND passw = ' $password ' ;")){
+    echo $query;
+    if($result = mysqli_query($mysqli, $query)){
         echo mysqli_num_rows($result);  
         //echo $result;
 
@@ -28,5 +27,4 @@ if(!$mysqli){
 
 
 mysqli_close($mysqli);
-
-//header('Location: index.html');
+?>
