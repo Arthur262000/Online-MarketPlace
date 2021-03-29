@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InstantGaming | Video Game Section</title>
+    <title>InstantGaming | Cart</title>
     <link rel="stylesheet" href="bootstrap5\css\bootstrap.css">
     <link rel="icon" href="favicon.ico"/>
   </head>
@@ -65,97 +65,53 @@
         </div>
     </nav>             
 </div>
-  
-    <div class="container containerItems pt-4 mt-4">
-      <div id="Action">
-      <h2>Action</h2>
-      <hr>
-      <div class="row m-2">
-        <div class="col-md m-3 colItems">1</div>
-        <div class="col-md m-3 colItems">2</div>
-        <div class="col-md m-3 colItems">3</div> 
-      </div>
-      <div class="row m-2">
-        <div class="col-md m-3 colItems">1</div>
-        <div class="col-md m-3 colItems">2</div>
-        <div class="col-md m-3 colItems">3</div> 
-      </div>
-    </div>
-    <div id="Adventure">
-      <h2>Adventure</h2>
-      <hr>
-      <div class="row m-2">
-        <div class="col-md m-3 colItems">1</div>
-        <div class="col-md m-3 colItems">2</div>
-        <div class="col-md m-3 colItems">3</div> 
-      </div>
-      <div class="row m-2">
-        <div class="col-md m-3 colItems">1</div>
-        <div class="col-md m-3 colItems">2</div>
-        <div class="col-md m-3 colItems">3</div> 
-      </div>
-    </div>
-    <div id="Battle">
-      <h2>Battle</h2>
-      <hr>
-      <div class="row m-2">
-        <div class="col-md m-3 colItems">1</div>
-        <div class="col-md m-3 colItems">2</div>
-        <div class="col-md m-3 colItems">3</div> 
-      </div>
-      <div class="row m-2">
-        <div class="col-md m-3 colItems">1</div>
-        <div class="col-md m-3 colItems">2</div>
-        <div class="col-md m-3 colItems">3</div> 
-      </div>
-    </div>
-    <div id="Sport">
-      <h2>Sport</h2>
-      <hr>
-      <div class="row m-2">
-        <div class="col-md m-3 colItems">1</div>
-        <div class="col-md m-3 colItems">2</div>
-        <div class="col-md m-3 colItems">3</div> 
-      </div>
-    </div>
-    </div>
 
-    <footer class="bg-dark text-center text-white">
-      <!-- Grid container -->
-      <div class="container">
-        <!-- Section: Form -->
-        <section>
-          <form>
-            <!--Grid row-->
-            <div class="row d-flex justify-content-center">
-              <div class="col-lg-8 col-lg-8 col-md-8 col-sm-12">
-                <!--Grid column-->
-                <p class="pt-2">
-                  <strong>Sign up for our newsletter</strong>
-                </p>
-                <!-- Email input -->
-                <div class="input-group">
-                  <input type="email" id="footerMail" class="form-control m-2" placeholder="Email adress"
-                    aria-label="Email addess"></input>
-                  <button type="submit" class="btn btn-outline-primary m-2">
-                    Subscribe
-                  </button>
-                </div>
-              </div>
+<div class="container containerItems pt-4 mt-4">
+    <div class="row">
+        <div class="col">
+            <form action="Cart.php" method="post">
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container">
+    <!-- Section: Form -->
+    <section>
+      <form>
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8 col-lg-8 col-md-8 col-sm-12">
+            <!--Grid column-->
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+            <!-- Email input -->
+            <div class="input-group">
+              <input type="email" id="footerMail" class="form-control m-2" placeholder="Email adress"
+                aria-label="Email addess"></input>
+              <button type="submit" class="btn btn-outline-primary m-2">
+                Subscribe
+              </button>
             </div>
-            <!--Grid row-->
-          </form>
-        </section>
-        <!-- Section: Form -->
-      </div>
-      <!-- Grid container -->
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0,1);">
-        © 2021 Copyright :
-        <a class="text-orange" href="index.html">InstantGaming.com</a>
-      </div>
-      <!-- Copyright -->
-    </footer>
+          </div>
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+  </div>
+  <!-- Grid container -->
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0,1);">
+    © 2021 Copyright :
+    <a class="text-orange" href="index.html">InstantGaming.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>

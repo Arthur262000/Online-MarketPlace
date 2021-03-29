@@ -1,3 +1,7 @@
+<?php
+require_once("./php/Item.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,17 +83,10 @@
       <h2>Playstation</h2>
       <hr>
       <div class="row m-2">
-        <form action="Console.html" method="POST">
-        <div class="col-md m-3 Item">
-          <form action=""></form>
-          <div class="colItems">
-            <img src="PS5.png" alt="PS5">
-          </div>
-          <div class="productCaption">
-            <h5>Playstation 5</h5>
-            <p>699.99$</p>
-          </div>
-        </div>
+            <?php
+            Item("Playstation 5"," ",499,"./upload/PS5.png");
+
+            ?>
       </form>
         <div class="col-md m-3 Item">
           <div class="colItems">
