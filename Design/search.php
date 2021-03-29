@@ -1,9 +1,10 @@
 <?php
 
 $mysqli = new mysqli("localhost", "root", "", "projet1");
+$search = $_POST['search'];
 $query = "SELECT * from log WHERE login LIKE '% $login %' ;";
 
-$search = $_POST['search'];
+
 
 if(!$mysqli){
     echo"Database Connection Error...".mysqli_connect_error();
@@ -14,8 +15,7 @@ if(!$mysqli){
     if($result = mysqli_query($mysqli, $query)){
         echo mysqli_num_rows($result);  
         //echo $result;
-
- 
+        
         $row = mysqli_fetch_array($result);
         echo $row[0];
     }
@@ -27,4 +27,3 @@ if(!$mysqli){
 
 
 mysqli_close($mysqli);
-?>
