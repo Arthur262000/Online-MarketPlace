@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InstantGaming | Your Account</title>
-  <link rel="stylesheet" href="bootstrap5\css\bootstrap.css">
-  <link rel="icon" href="favicon.ico" />
-</head>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstantGaming | Cart</title>
+    <link rel="stylesheet" href="bootstrap5\css\bootstrap.css">
+    <link rel="icon" href="favicon.ico"/>
+  </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Structure -->
   <div class="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
+        <div class="container">   
         <a href="index.html">
                 <img src="logo.svg" alt="Logo" style="width: 150px; padding: 2px 10px;">
                     </a>
@@ -59,94 +57,64 @@
                             <a class="nav-link" href="Cart.html"><img src="../Design/cart.svg"></a>
                           </li>
                         </ul>
-                        <form class="d-flex" action="search.php" method="POST">
+                        <form class="d-flex">
                           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                           <button class="btn btn-outline-primary" type="submit">Search</button>
                 </form>
             </div>
         </div>
-      </div>
-    </nav>
-  </div>
+    </nav>             
+</div>
 
-  <section class="Form text-center">
-    <div class="AccountContainer">
-      <div class="Accountrow containerItems justify-content-center">
-        <h2>Hello!</h2>
-        <strong>Please enter your coordinates</strong>
-        <form action="login.php" method="POST">
-          <div class="form-row">
-            <div class="col-xs-8">
-              <input type="email" id="AccountMail" name="AccountMail" class="form-control mb-4 mt-4"
-                placeholder="Email Address" aria-label="Email address"></input>
+<div class="container containerItems pt-4 mt-4">
+    <div class="row">
+        <div class="col">
+            <form action="Cart.php" method="post">
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container">
+    <!-- Section: Form -->
+    <section>
+      <form>
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8 col-lg-8 col-md-8 col-sm-12">
+            <!--Grid column-->
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+            <!-- Email input -->
+            <div class="input-group">
+              <input type="email" id="footerMail" class="form-control m-2" placeholder="Email adress"
+                aria-label="Email addess"></input>
+              <button type="submit" class="btn btn-outline-primary m-2">
+                Subscribe
+              </button>
             </div>
           </div>
-          <div class="form-row">
-            <div class="col-xs-8">
-              <input type="password" id="AccountPassword" name="AccountPassword" class="form-control"
-                placeholder="Password" aria-label="Password"></input>
-            </div>
-          </div>
-          <div class="form-row"">
-              <div class=" col-xs-8">
-            <button type="submit" class="btn btn-outline-primary m-4">
-              Connexion
-            </button>
-          </div>
-      </div>
-      <a href="#">Forgot Password?</a>
-      <p>Don't have an account? <a href="Register.html">Register here</a></p>
+        </div>
+        <!--Grid row-->
       </form>
-    </div>
-    </div>
-    </div>
-    </div>
-  </section>
+    </section>
+    <!-- Section: Form -->
+  </div>
+  <!-- Grid container -->
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0,1);">
+    © 2021 Copyright :
+    <a class="text-orange" href="index.html">InstantGaming.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 
-  <footer class="bg-dark text-center text-white">
-    <!-- Grid container -->
-    <div class="container">
-      <!-- Section: Form -->
-      <section>
-        <form>
-          <!--Grid row-->
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-8 col-lg-8 col-md-8 col-sm-12">
-              <!--Grid column-->
-              <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
-              </p>
-              <!-- Email input -->
-              <div class="input-group">
-                <input type="email" id="footerMail" class="form-control m-2" placeholder="Email adress"
-                  aria-label="Email addess"></input>
-                <button type="submit" class="btn btn-outline-primary m-2">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-          <!--Grid row-->
-        </form>
-      </section>
-      <!-- Section: Form -->
-    </div>
-    <!-- Grid container -->
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0,1);">
-      © 2021 Copyright :
-      <a class="text-orange" href="index.html">InstantGaming.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
-    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 
 </body>
-
 </html>
