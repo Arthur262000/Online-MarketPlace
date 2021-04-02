@@ -62,9 +62,9 @@ body{
   margin: 102px;
 }
 
-.AccountContainer
+.SmallContainer
 {
-  width: 100%;
+  width: 560px;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
@@ -72,33 +72,17 @@ body{
   text-align: center;
 }
 
-@media (min-width: 576px) {
-  .AccountContainer-sm, .AccountContainer {
-    max-width: 560px;
-  }
-}
-@media (min-width: 768px) {
-  .cAccountContainer-md, .AccountContainer-sm, .AccountContainer {
-    max-width: 560px;
-  }
-}
-@media (min-width: 992px) {
-  .AccountContainer-lg, .AccountContainer-md, .AccountContainer-sm, .AccountContainer {
-    max-width: 560px;
-  }
-}
-@media (min-width: 1200px) {
-  .AccountContainer-xl, .AccountContainer-lg, .AccountContainer-md, .AccountContainer-sm, .AccountContainer {
-    max-width: 560px;
-  }
-}
-@media (min-width: 1400px) {
-  .AccountContainer-xxl, .AccountContainer-xl, .AccountContainer-lg, .AccountContainer-md, .AccountContainer-sm, .AccountContainer {
-    max-width: 560px;
-  }
+.MediumContainer
+{
+  width: 700px;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
-.Accountrow {
+.Loginrow {
   --bs-gutter-x: 2em;
   --bs-gutter-y: 2em;
   display: flex;
@@ -108,7 +92,7 @@ body{
   margin-left: calc(var(--bs-gutter-x) / -2);
 }
 
-.Accountrow > * {
+.Loginrow > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -116,6 +100,31 @@ body{
   padding-left: calc(var(--bs-gutter-x) / 2);
   margin-top: var(--bs-gutter-y);
 }
+
+/*----- Cart Items -----*/
+
+.cart-page{
+
+  margin: 80px auto;
+}
+
+table{
+
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/*----- Add Product -----*/
+
+.dztxt{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(128, 128, 128, 0.5);
+
+}
+
 
 :root {
   --bs-blue: #0d6efd;
@@ -134,7 +143,7 @@ body{
   --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
-  --bs-info: #0dcaf0;
+  --bs-info: #e0e9eb;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;

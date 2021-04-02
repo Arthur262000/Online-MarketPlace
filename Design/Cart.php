@@ -4,7 +4,7 @@ if (isset($_POST['product_id'])) {
     // Set the post variables so we easily identify them, also make sure they are integer
     $product_id = (int)$_POST['product_id'];
     // Prepare the SQL statement, we basically are checking if the product exists in our databaser
-    $stmt = $pdo->prepare('SELECT * FROM item WHERE Id = ?');
+    $stmt = $pdo->prepare('SELECT * FROM item WHERE id = ?');
     $stmt->execute([$_POST['product_id']]);
     // Fetch the product from the database and return the result as an Array
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -61,16 +61,15 @@ if ($products_in_cart) {
 ?>
 <?=template_header('Cart')?>
 
-<div class="container containerItems pt-4 mt-4">
+<div class="container containerItems pt-4 mt-4 cart-page">
     <h1>Cart</h1>
     <hr>
     <form action="index.php?page=Cart" method="post">
         <table>
             <thead>
             <tr>
-                    <td colspan="2">Product</td>
-                    <td>Price</td>
-                    <td>Total</td>
+                    <th>Product</th>
+                    <th>Price</th>
                 </tr>
             </thead>
             <tbody>

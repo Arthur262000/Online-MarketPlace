@@ -136,4 +136,36 @@ echo <<<EOT
 </html>
 EOT;
 }
+
+// Upload 
+
+$folder_name = 'C:\wamp64\www\Online-MarketPlace\Design\Upload';
+
+if(!empty($_FILES))
+{
+  $temp_file = $_FILES['file']['tmp_name'];
+  $location = $folder_name . $_FILES['file']['name'];
+  move_uploaded_file($temp_file, $location);
+
+}
+
+$result = array();
+
+$files = scandir('upload');
+
+$output = '<div class="row">';
+
+if(false !== $files)
+{
+  foreach($files as $file)
+  {
+    if('.' != $file && '..' != $file)
+    {
+      $output .= '<p>Success</p>';
+    }
+  }
+
+}
+$output .= '</div>';
+echo $output;
 ?>
