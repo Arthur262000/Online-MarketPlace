@@ -1,6 +1,6 @@
 <?php
 // Get the 4 most recently added products
-$stmt = $pdo->prepare('SELECT * FROM products ORDER BY date_added DESC LIMIT 4');
+$stmt = $pdo->prepare('SELECT * FROM item ORDER BY Date_Added DESC LIMIT 4');
 $stmt->execute();
 $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -44,22 +44,22 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
   </div>
 
-  <div class="container containerItems pt-4 mt-4">
+  <div class="container containerItems mt-4 pt-4">
+    <h2>New Arrivals</h2>
+    <hr>
     <div class="row m-2">
-      <div class="col-md m-3">
-        <div class="colItems">
+      <div class="col-xs-3 m-3">
         <?php foreach ($recently_added_products as $product): ?>
-        <a href="index.php?page=product&id=<?=$product['id']?>" class="colItems img">
-            <img src="Images/<?=$product['img']?>" alt="<?=$product['name']?>">
-            <span class="name"><?=$product['name']?></span>
+        <a href="index.php?page=product&id=<?=$product['Id']?>">
+            <img src="Images/<?=$product['photo']?>" alt="<?=$product['name_']?>" class="colItems"  class="Item" width="200" height="200">
+            <h3 class="name"><?=$product['name_']?></h3>
             <span class="price">
                 <?=$product['price']?>&dollar;
             </span>
         </a>
         <?php endforeach; ?>
-        </div>
+          </div>
     </div>
-</div>
 </div>
 
 <?=template_footer()?>
