@@ -122,7 +122,7 @@ echo <<<EOT
 <!-- Copyright -->
 <div class="text-center p-3" style="background-color: rgba(0, 0, 0,1);">
   © 2021 Copyright :
-  <a class="text-orange" href="index.html">InstantGaming.com</a>
+  <a class="text-orange" href="Index.php">InstantGaming.com</a>
 </div>
 <!-- Copyright -->
 </footer>
