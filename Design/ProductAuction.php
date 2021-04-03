@@ -21,11 +21,14 @@ if (isset($_GET['id'])) {
 
 <?=template_header('Product')?>
 <div class="d-flex" style="margin-top:100px;">
-  <div class="MediumContainer containerItems pt-4">
+  <div class="MediumContainer containerItems pt-2">
       <div class="row m-2 align-items-center">
         <div class="col-6">
-          <div class="colItems mb-4">
-             <img src="Images/<?//=$product['photo']?>" width="300" height="300" alt="<?//=$product['name_']?>">
+            <div class="row">
+                    <strong for="RemainingTime" class="mb-4">Remaining Time : </strong>
+            </div>
+            <div class="colItems mb-4">
+                <img src="Images/<?//=$product['photo']?>" width="300" height="300" alt="<?//=$product['name_']?>">
             </div>
         </div>
         <div class="col-6">
@@ -35,15 +38,18 @@ if (isset($_GET['id'])) {
                 <br>
                 <p>Description<?//=$product['description']?></p>
                 <hr>
-                <div class="form-row mt-4">
-                    <button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg" disabled>Buy It Now</button>
-                    <button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg">Auction</button>
-                    <button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg">Best Offer</button>
+                <div class="row m-2">
+                    <div class="col-6 text-center">
+                    <h5>Price<?//=$product['price']?> &dollar;</h5>
+                    <input type="text" class="form-control mt-3" name="bid" id="bid" placeholder="Bid"></input>
+                    </div>
+                    <div class="col-6">
+                    <button type="submit" class="btn btn-outline-primary btn-lg mt-3 p-3">Add to Cart <img src="../Design/cart.svg"></button>
                     </div>
                 </div>
+          </div> 
           </div>
-    </div>  
+  </div>
 </div>
-
 
 <?=template_footer()?>

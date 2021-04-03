@@ -74,6 +74,13 @@ body{
 
 }
 
+#Product{
+
+  display: flex;
+  align-items: center;
+
+}
+
 .Form{
   margin: 102px;
 }
