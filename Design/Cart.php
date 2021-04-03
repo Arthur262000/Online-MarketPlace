@@ -1,3 +1,4 @@
+
 <?php
 // If the user clicked the add to cart button on the product page we can check for the form data
 if (isset($_POST['product_id'])) {
@@ -61,49 +62,54 @@ if ($products_in_cart) {
 ?>
 <?=template_header('Cart')?>
 
-<div class="container containerItems pt-4 mt-4 cart-page">
+<div class="container containerItems pt-4 mt-4 mb-4">
     <h1>Cart</h1>
     <hr>
     <form action="index.php?page=Cart" method="post">
-        <table>
+    <div class="table-responsive">
+        <table class="table">
             <thead>
-            <tr>
-                    <th>Product</th>
-                    <th>Price</th>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
                 </tr>
             </thead>
             <tbody>
                 <?php if (empty($products)): ?>
                 <tr>
-                    <td colspan="5" style="text-align:center;">You have no products added in your Shopping Cart</td>
+                    <td colspan="2" align="center">You have no products added in your Shopping Cart</td>
                 </tr>
+                <!-- En dessous, essaye de faire fonctionner le php en ajoutant un item au cart
+                et dis moi si la disposition est bonne -->
                 <?php else: ?>
                 <?php foreach ($products as $product): ?> 
                     <tr>
-                    <td class="img">
-                        <a href="index.php?page=product&id=<?=$product['Id']?>">
-                            <img src="Images/<?=$product['photo']?>" width="50" height="50" alt="<?=$product['name_']?>">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="index.php?page=product&id=<?=$product['Id']?>"><?=$product['name_']?></a>
-                        <br>
-                        <a href="index.php?page=cart&remove=<?=$product['Id']?>" class="remove">Remove</a>
-                    </td>
-                    <td class="price">&dollar;<?=$product['price']?></td>
-                    <td class="price">&dollar;<?=$product['price'] * $products_in_cart[$product['Id']]?></td>
+                        <td class="img mt-2 mb-2">
+                            <a href="index.php?page=product&id=<?=$product['Id']?>">
+                                <img src="Images/<?=$product['photo']?>" width="50" height="50" alt="<?=$product['name_']?>">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="index.php?page=product&id=<?=$product['Id']?>"><?=$product['name_']?></a>
+                            <br>
+                            <a href="index.php?page=cart&remove=<?=$product['Id']?>" class="remove">Remove</a>
+                        </td>
+                        <td class="price"><?=$product['price']?>&dollar;</td>
                 </tr>
                 <?php endforeach; ?>
                 <?php endif; ?>
             </tbody>
         </table>
-        <div class="subtotal">
-            <span class="text">Subtotal</span>
-            <span class="price">&dollar;<?=$subtotal?></span>
+        <div align="end" class="m-4">
+            <span class="text">Total :</span>
+            <!-- Afficher le prix total en additionnant le prix des items -->
+            <span class="price"><?//=$total?>&dollar;</span>
         </div>
-        <div class="buttons">
-            <input type="submit" value="Update" name="update">
-            <input type="submit" value="Place Order" name="placeorder">
+        </div>
+        <div align="end">
+            <!-- Redirige vers la page Payment -->
+        <button type="button" class="btn btn-outline-primary btn-lg m-4" id="submit">Payment &#187;
+                </button>
         </div>
     </form>
 </div>

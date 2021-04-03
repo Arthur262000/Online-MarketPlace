@@ -24,8 +24,8 @@ if (isset($_GET['id'])) {
   <div class="MediumContainer containerItems pt-4">
       <div class="row m-2 align-items-center">
         <div class="col-6">
-          <div class="colItems mb-4">
-             <img src="Images/<?//=$product['photo']?>" width="300" height="300" alt="<?//=$product['name_']?>">
+          <div class="colItems">
+              <img src="Images/<?//=$product['photo']?>" width="300" height="300" alt="<?//=$product['name_']?>">
             </div>
         </div>
         <div class="col-6">
@@ -35,15 +35,16 @@ if (isset($_GET['id'])) {
                 <br>
                 <p>Description<?//=$product['description']?></p>
                 <hr>
-                <div class="form-row mt-4">
-                    <button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg" disabled>Buy It Now</button>
-                    <button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg">Auction</button>
-                    <button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg">Best Offer</button>
+                <div class="row m-2">
+                    <div class="col-6 text-center mt-3 p-3">
+                    <h5>Price<?//=$product['price']?> &dollar;</h5>
+                    </div>
+                    <div class="col-6">
+                    <button type="submit" class="btn btn-outline-primary btn-lg mt-3 p-3">Add to Cart <img src="../Design/cart.svg"></button>
                     </div>
                 </div>
           </div>
     </div>  
 </div>
-
 
 <?=template_footer()?>

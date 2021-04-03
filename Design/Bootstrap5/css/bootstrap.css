@@ -10,9 +10,23 @@
 
 /*----- My Css -----*/
 
-.main{
+html {
+  position: relative;
+  min-height: 100%;
+}
 
-  position: relative !important;
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0px;
+}
+
+.containerfooter{
+
+  background-color: var(--bs-gray-dark);
+  position: relative;
+  bottom: -16px;
 
 }
 
@@ -60,6 +74,13 @@ body{
 
 }
 
+#Product{
+
+  display: flex;
+  align-items: center;
+
+}
+
 .Form{
   margin: 102px;
 }
@@ -76,7 +97,7 @@ body{
 
 .MediumContainer
 {
-  width: 700px;
+  width: 900px;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
@@ -107,10 +128,6 @@ body{
 
 /*----- Cart Items -----*/
 
-.cart-page{
-
-  margin: 80px auto;
-}
 
 table{
 
@@ -118,6 +135,37 @@ table{
   border-collapse: collapse;
 }
 
+.cart-info{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+thead th{
+
+  text-align: left;
+  padding: 5px;
+  color: #fff;
+  background-color: #ff5400 !important;
+
+}
+
+td{
+
+   padding: 10px 5px;
+
+}
+
+td input{
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+td a{
+  color: #ff5400;
+  font-size: 12px;
+}
 /*----- Add Product -----*/
 
 .dztxt{
