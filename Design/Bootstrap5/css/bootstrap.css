@@ -90,7 +90,7 @@ body{
 
 .MediumContainer
 {
-  width: 700px;
+  width: 900px;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
