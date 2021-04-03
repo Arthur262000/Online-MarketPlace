@@ -3,12 +3,16 @@
 $mysqli = new mysqli("localhost", "root", "", "WebMarket");
 
 
-$option = $_POST['options'];
-$cardnum = $_POST['CardNum'];
-$name = $_POST['NameDisp'];
-$cvc = $_POST['CVC'];
-$month = $_POST['Month'];
-$year = $_POST['Year'];
+$name = $_POST['Name'];
+$surname = $_POST['Surname'];
+$adress1 = $_POST['Adress1'];
+$adress2 = $_POST['Adress2'];
+$city = $_POST['City'];
+$country = $_POST['Country'];
+$zipcode = $_POST['Zip'];
+$password = $_POST['AccountPassword'];
+$phone = $_POST['tel'];
+$email = $_POST['AccountMail'];
 
 $query = "INSERT INTO signin (Admin, login, pass) values (false, '$email', '$password');";
 
@@ -35,7 +39,3 @@ if (!$mysqli) {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 }
-
-mysqli_close($mysqli);
-
-?>
