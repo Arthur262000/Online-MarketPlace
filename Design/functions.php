@@ -88,37 +88,28 @@ EOT;
 }
 // Template footer
 function template_footer() {
-$year = date('Y');
 echo <<<EOT
-<footer class="bg-dark text-center text-white">
-<!-- Grid container -->
-<div class="container">
-  <!-- Section: Form -->
+<footer class="text-center text-white">
+<div class="container-fluid containerfooter">
   <section>
     <form>
-      <!--Grid row-->
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8 col-lg-8 col-md-8 col-sm-12">
-          <!--Grid column-->
           <p class="pt-2">
             <strong>Sign up for our newsletter</strong>
           </p>
-          <!-- Email input -->
           <div class="input-group">
-            <input type="email" id="footerMail" class="form-control m-2" placeholder="Email adress"
+            <input type="email" id="footerMail" class="form-control mb-4" placeholder="Email adress"
               aria-label="Email addess"></input>
-            <button type="submit" class="btn btn-outline-primary m-2">
+            <button type="submit" class="btn btn-outline-primary mb-4">
               Subscribe
             </button>
           </div>
         </div>
       </div>
-      <!--Grid row-->
     </form>
   </section>
-  <!-- Section: Form -->
-</div>
-<!-- Grid container -->
+ </div> 
 <!-- Copyright -->
 <div class="text-center p-3" style="background-color: rgba(0, 0, 0,1);">
   © 2021 Copyright :
@@ -126,6 +117,8 @@ echo <<<EOT
 </div>
 <!-- Copyright -->
 </footer>
+
+
     
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>

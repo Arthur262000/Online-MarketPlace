@@ -1,9 +1,3 @@
-<?php
-
-include 'functions.php';
-
-?>
-
 <?=template_header('My Market')?>
 <div class="container containerItems mt-4 mb-4 pt-4 pb-4">
     <ul class="nav nav-tabs">
@@ -20,23 +14,23 @@ include 'functions.php';
             <hr>
             <div class="form-row">
             <strong>Select Your Payment Method</strong>
-            <div class="btn-group paymentBtnGroup btn-group-justified" data-toggle="buttons">
-					            <label class="btn paymentMethod active">
-					            	<div class="method visa"></div>
-					                <input type="radio" name="options" checked> Visa 
-					            </label>
-					            <label class="btn paymentMethod">
-					            	<div class="method master-card"></div>
-					                <input type="radio" name="options"> Master-Card
-					            </label>
-					            <label class="btn paymentMethod">
-				            		<div class="method amex"></div>
-					                <input type="radio" name="options"> American Express
-					            </label>
-					             <label class="btn paymentMethod">
-				             		<div class="method Paypal"></div>
-					                <input type="radio" name="options"> Paypal 
-					            </label>
+                        <div class="form-row mt-2">
+                                <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Visa" value="option1">
+                                <label class="form-check-label" for="Visa">Visa</label>
+                                    </div>
+                                <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Master-Card" value="option2">
+                                <label class="form-check-label" for="Master-Card">Master-Card</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="American Express" value="option3">
+                                <label class="form-check-label" for="American Express">American Express</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Paypal" value="option4">
+                                <label class="form-check-label" for="Paypal">Paypal</label>
+                                    </div>
 					        </div>  
                         </div>
                         <hr> 
@@ -66,8 +60,8 @@ include 'functions.php';
                             </button>
                         </div>
                     </div>
-                </div>
-            </div>
         </div>
+    </div>
+</div>
 
 <?=template_footer()?>
