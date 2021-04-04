@@ -27,7 +27,7 @@ if (!$mysqli) {
       while ($row = mysqli_fetch_array($result2)) {
         if ($id == $row['IdSignIn']) {
 
-          $Id = $row['IdSignIn'];
+          $Id = $row['Id'];
           echo "<h1> Connected </h1>";
           header("Location: index.php?Id=$Id");
         }

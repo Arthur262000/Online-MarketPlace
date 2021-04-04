@@ -5,14 +5,21 @@ if (!$Id) {
     header('Location: login.html');
 } else {
     $a = $_GET['Id'];
-    /*$stmt = $pdo->prepare("SELECT * FROM members where IdSignIn=$a;");
+    $stmt = $pdo->prepare("SELECT * FROM payement where IdMembers=$a;");
     $stmt->execute();
-    $member = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $name = $member['name_'];*/
+    $cards = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($cards as $card) {
+        $month = $card['month'];
+        $year = $card['year'];
+        $cardname = $card['cardname'];
+        $cardnumber = $card['cardnumber'];
+        $securitycode = $card['securitycode'];
+        $typecard = $card['typecard'];
+    }
 
- template_header('My Market', $a); 
+    template_header('My Market', $a);
 
-echo <<<EOT
+    echo <<<EOT
                 <div class="container containerItems mt-4 mb-4 pt-4 pb-4">
                     <ul class="nav nav-tabs">
                         <li class="nav-item tabs">
@@ -50,23 +57,23 @@ echo <<<EOT
                                 </div>
                                 <hr>
                                 <div class="col-xs-8">
-                                    <input type="text" id="CardNum" name="CardNum" class="form-control mb-4 mt-4" placeholder="Card Number" aria-label="Card Number"></input>
+                                    <input type="text" id="CardNum" name="CardNum" class="form-control mb-4 mt-4" value="$cardnumber" placeholder="number" aria-label="Card Number"></input>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-xs-8">
-                                        <input type="text" id="NameDisp" name="NameDisp" class="form-control mb-4 mt-4" placeholder="Name Displayed" aria-label="NameDisp"></input>
+                                        <input type="text" id="NameDisp" name="NameDisp" class="form-control mb-4 mt-4" value="$cardname" placeholder="name" aria-label="NameDisp"></input>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-4">
-                                        <input type="text" class="form-control" id="CVC" name="CVC" placeholder="CVC"></input>
+                                        <input type="text" class="form-control" id="CVC" name="CVC" value="$securitycode" placeholder="CVC" ></input>
                                     </div>
                                     <div class="form-group col-4">
-                                        <input id="Month" name="Month" class="form-control" placeholder="MM">
+                                        <input id="Month" name="Month" class="form-control" value="$month" placeholder="MM">
                                         </input>
                                     </div>
                                     <div class="form-group col-4">
-                                        <input type="text" class="form-control mb-4" id="Year" name="Year" placeholder="YYYY"></input>
+                                        <input type="text" class="form-control mb-4" id="Year" name="Year" placeholder="YYYY" value="$year"></input>
                                     </div>
                                     <div align='center'>
                                         <button type="submit" class="btn btn-outline-primary btn-lg" id="submit">Save
@@ -79,6 +86,5 @@ echo <<<EOT
                 </div>
                 EOT;
 
- template_footer();
- 
-}?>
+    template_footer();
+}

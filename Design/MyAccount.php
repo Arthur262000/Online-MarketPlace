@@ -5,7 +5,7 @@ if (!$Id) {
     header('Location: login.html');
 } else {
     $a = $_GET['Id'];
-    $stmt = $pdo->prepare("SELECT * FROM members where `IdSignIn`=$a;");
+    $stmt = $pdo->prepare("SELECT * FROM members where `Id`=$a;");
     $stmt->execute();
     $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($members as $member){
@@ -17,12 +17,12 @@ if (!$Id) {
         $country = $member['country'];
         $zip = $member['postalcode'];
         $phone = $member['phone'];
-        echo $name;}
+    }
 
  template_header('My Market', $a); 
 
 echo <<<EOT
-                <label> Id : $a </label>
+                
                 <div class="container containerItems mt-4 mb-4 pt-4 pb-4">
                     <ul class="nav nav-tabs">
                     <li class="nav-item tabs">
@@ -102,4 +102,3 @@ echo <<<EOT
 template_footer();
 
 }
-?>
