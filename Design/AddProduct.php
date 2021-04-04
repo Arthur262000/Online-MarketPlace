@@ -77,16 +77,9 @@
     </div>
     <div class="form-row">
         <div class="form-group col-auto">
-            <form action="functions.php" class="dropzone dztxt" id="dropzonefiles">
-            Drag and Drop photos
-
-            </form>
+        <input type="file" class="form-control" id="customFile">Choose a photo</input>
         </div>
         <div class="form-group col-auto">
-            <form action="functions.php" class="dropzone dztxt" id="dropzonefiles">
-            Drag and Drop videos
-    
-            </form>
         </div>
     </div>
     <div class="form-row">
