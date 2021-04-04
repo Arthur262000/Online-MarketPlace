@@ -1,7 +1,11 @@
+<<<<<<< Updated upstream
 <?php
 if (!$Id) {
     header('Location: login.html');
 } else {
+=======
+<?=template_header('Add Product')?>
+>>>>>>> Stashed changes
 
     template_header('Add Product', $Id);
 
