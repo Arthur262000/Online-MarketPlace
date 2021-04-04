@@ -3,12 +3,17 @@
 $mysqli = new mysqli("localhost", "root", "", "WebMarket");
 
 
-$option = $_POST['options'];
-$cardnum = $_POST['CardNum'];
-$name = $_POST['NameDisp'];
-$cvc = $_POST['CVC'];
-$month = $_POST['Month'];
-$year = $_POST['Year'];
+$name = $_POST['Name'];
+$surname = $_POST['Surname'];
+$adress1 = $_POST['Adress1'];
+$adress2 = $_POST['Adress2'];
+$city = $_POST['City'];
+$country = $_POST['Country'];
+$zipcode = $_POST['Zip'];
+$email = $_POST['AccountMail'];
+$password = $_POST['AccountPassword'];
+$phone = $_POST['tel'];
+
 
 $query = "INSERT INTO signin (Admin, login, pass) values (false, '$email', '$password');";
 
@@ -27,7 +32,7 @@ if (!$mysqli) {
                 $query2 = "INSERT INTO members (IdSignIn, name_, surname, address1, address2, city, postalcode, country, phone)
              values ('$id', '$name', '$surname', '$adress1', '$adress2', '$city', '$zipcode', '$country', '$phone');";
                 if (mysqli_query($mysqli, $query2)) {
-                    header('Location: index.html');
+                    header('Location: index.php');
                 }
             }
         }
