@@ -20,7 +20,7 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <div class="carousel-item">
             <img src="Carousel3.jpg" class="d-block h-100 w-100" alt="...">
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
@@ -29,36 +29,24 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-  </div>
 
   <div class="container containerItems mt-4 pt-4">
     <h2>New Arrivals</h2>
     <hr>
     <div class="row m-2">
-      <div class="col-xs-3 m-3">
         <?php foreach ($recently_added_products as $product): ?>
+          <div class="col-3 Item mb-4">
         <a href="index.php?page=product&id=<?=$product['Id']?>">
-            <img src="Images/<?=$product['photo']?>" alt="<?=$product['name_']?>" class="colItems"  class="Item" width="200" height="200">
+            <img src="Images/<?=$product['photo']?>" alt="<?=$product['name_']?>" class="colItems" width="200" height="200">
             <h3 class="name"><?=$product['name_']?></h3>
             <span class="price">
                 <?=$product['price']?>&dollar;
             </span>
         </a>
+        </div>
         <?php endforeach; ?>
-          </div>
     </div>
 </div>
 

@@ -15,70 +15,62 @@
     <!-- Navbar -->
     <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a href="index.html">
+            <div class="container">   
+            <a href="Index.php">
                     <img src="logo.svg" alt="Logo" style="width: 150px; padding: 2px 10px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="CategoriesDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
-                            <ul class="dropdown-menu" aria-labelledby="CategoriesDropdown">
-                                <li><a class="dropdown-item" href="Console.html" id="GamingConsoleDropdown"
-                                        role="button" data-toggle="modal" aria-expanded="false">Gaming Console</a></li>
-                                <ul>
-
-                                    <a class="dropdown-item" href="Console.html#Playstation">Playstation</a>
-                                    <a class="dropdown-item" href="Console.html#Xbox">Xbox</a>
-                                    <a class="dropdown-item" href="Console.html#Nintendo">Nintendo</a>
-                                    <a class="dropdown-item" href="Console.html#Other">Other</a>
-
-                                </ul>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="Video-game.html" class="dropdown-toggle"
-                                        id="VideoGamesDropdown" role="button" data-toggle="modal"
-                                        aria-expanded="false">Video Games</a></li>
-                                <ul>
-
-                                    <a class="dropdown-item" href="Video-game.html#Action">Action</a>
-                                    <a class="dropdown-item" href="Video-game.html#Adventure">Adventure</a>
-                                    <a class="dropdown-item" href="Video-game.html#Battle">Battle</a>
-                                    <a class="dropdown-item" href="Video-game.html#Sport">Sport</a>
-
-                                </ul>
-
+                        </a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="CategoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+                                <ul class="dropdown-menu" aria-labelledby="CategoriesDropdown">
+                                    <li><a class="dropdown-item" href="Index.php?page=Console" id="GamingConsoleDropdown" role="button" data-toggle="modal" aria-expanded="false">Gaming Console</a></li>
+                                        <ul>
+                                            
+                                            <a class="dropdown-item" href="Index.php?page=Console#Playstation">Playstation</a>
+                                            <a class="dropdown-item" href="Index.php?page=Console#Xbox">Xbox</a>
+                                            <a class="dropdown-item" href="Index.php?page=Console#Nintendo">Nintendo</a>
+                                            <a class="dropdown-item" href="Index.php?page=Console#Other">Other</a>
+                                        
+                                        </ul>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="Index.php?page=Video-game" class="dropdown-toggle" id="VideoGamesDropdown" role="button" data-toggle="modal" aria-expanded="false">Video Games</a></li>
+                                        <ul>
+                                            
+                                                <a class="dropdown-item" href="Index.php?page=Video-game#Action">Action</a>
+                                                <a class="dropdown-item" href="Index.php?page=Video-game#Adventure">Adventure</a>
+                                                <a class="dropdown-item" href="Index.php?page=Video-game#Battle">Battle</a>
+                                                <a class="dropdown-item" href="Index.php?page=Video-game#Sport">Sport</a>
+                                            
+                                        </ul>
+                                    
+                                  </ul>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="Index.php?page=Sell">sell</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="Index.php?page=Login">Account</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="Index.php?page=Cart"><img src="../Design/cart.svg"></a>
+                              </li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Sell.html">sell</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Account.html">Account</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Cart.html"><img src="../Design/cart.svg"></a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                            <form class="d-flex" action="search.php" method="POST">
+                              <input class="form-control me-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search">
+                              <button class="btn btn-outline-primary" type="submit" >Search</button>
                     </form>
                 </div>
             </div>
-        </nav>
+        </nav>             
     </div>
 
     <section class="Form text-center">
-        <div class="AccountContainer">
-            <div class="Accountrow containerItems justify-content-center">
+        <div class="SmallContainer">
+            <div class="row containerItems justify-content-center">
                 <h2>Register</h2>
                 <strong>Please enter your coordinates</strong>
                 <form action="register.php" method="POST">
@@ -151,42 +143,35 @@
     </section>
 
 
-    <footer class="bg-dark text-center text-white">
-        <!-- Grid container -->
-        <div class="container">
-            <!-- Section: Form -->
-            <section>
-                <form>
-                    <!--Grid row-->
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-lg-8 col-lg-8 col-md-8 col-sm-12">
-                            <!--Grid column-->
-                            <p class="pt-2">
-                                <strong>Sign up for our newsletter</strong>
-                            </p>
-                            <!-- Email input -->
-                            <div class="input-group">
-                                <input type="email" id="footerMail" class="form-control m-2" placeholder="Email adress"
-                                    aria-label="Email addess"></input>
-                                <button type="submit" class="btn btn-outline-primary m-2">
-                                    Subscribe
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Grid row-->
-                </form>
-            </section>
-            <!-- Section: Form -->
+<footer class="text-center text-white">
+<div class="container-fluid containerfooter">
+  <section>
+    <form>
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8 col-lg-8 col-md-8 col-sm-12">
+          <p class="pt-2">
+            <strong>Sign up for our newsletter</strong>
+          </p>
+          <div class="input-group">
+            <input type="email" id="footerMail" class="form-control mb-4" placeholder="Email adress"
+              aria-label="Email addess"></input>
+            <button type="submit" class="btn btn-outline-primary mb-4">
+              Subscribe
+            </button>
+          </div>
         </div>
-        <!-- Grid container -->
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0,1);">
-            © 2021 Copyright :
-            <a class="text-orange" href="index.html">InstantGaming.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
+      </div>
+    </form>
+  </section>
+ </div> 
+<!-- Copyright -->
+<div class="text-center p-3" style="background-color: rgba(0, 0, 0,1);">
+  © 2021 Copyright :
+  <a class="text-orange" href="Index.php">InstantGaming.com</a>
+</div>
+<!-- Copyright -->
+</footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
         integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
