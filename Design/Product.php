@@ -1,6 +1,4 @@
 <?php
-
-include 'functions.php';
 // Check to make sure the id parameter is specified in the URL
 if (isset($_GET['id'])) {
     // Prepare statement and execute, prevents SQL injection

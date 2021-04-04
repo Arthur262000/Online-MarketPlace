@@ -71,7 +71,7 @@ echo <<<EOT
                                 <a class="nav-link" href="Index.php?page=Sell">sell</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="Index.php?page=Login">Account</a>
+                                <a class="nav-link" href="Index.php?page=MyAccount">Account</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="Index.php?page=Cart"><img src="../Design/cart.svg"></a>
