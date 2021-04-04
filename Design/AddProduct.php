@@ -1,16 +1,11 @@
-<<<<<<< Updated upstream
 <?php
 if (!$Id) {
     header('Location: login.html');
 } else {
-=======
-<?=template_header('Add Product')?>
->>>>>>> Stashed changes
 
     template_header('Add Product', $Id);
 
 echo <<<EOT
-                <link rel="stylesheet" href="bootstrap5\Dropzone\dropzone.css">
                     <script language="javascript" type="text/javascript">
                     function Categories(listindex)
                     {
@@ -86,15 +81,7 @@ echo <<<EOT
                     </div>
                     <div class="form-row">
                         <div class="form-group col-auto">
-                            <form action="functions.php" class="dropzone dztxt" id="dropzonefiles">
-                            Drag and Drop photos
-                            </form>
-                        </div>
-                        <div class="form-group col-auto">
-                            <form action="functions.php" class="dropzone dztxt" id="dropzonefiles">
-                            Drag and Drop videos
-                    
-                            </form>
+                            <input type="file" class="form-control" id="customFile"/>
                         </div>
                     </div>
                     <div class="form-row">
@@ -166,9 +153,10 @@ echo <<<EOT
                     }
                 });
                 </script>
-                template_footer()
                 <script src="./Design/Bootstrap5/Dropzone/dropzone.js"></script>
 
                 EOT;
+
+                template_footer();
 
 }?>
