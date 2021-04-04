@@ -68,13 +68,13 @@ echo <<<EOT
                                   </ul>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="Index.php?page=Sell">sell</a>
+                                <a class="nav-link" href="Index.php?page=Sell&Id=$Id">sell</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="Index.php?page=MyAccount&Id=$Id">Account</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="Index.php?page=Cart"><img src="../Design/cart.svg"></a>
+                                <a class="nav-link" href="Index.php?page=Cart&Id=$Id"><img src="../Design/cart.svg"></a>
                               </li>
                             </ul>
                             <form class="d-flex" action="search.php" method="POST">
@@ -87,6 +87,8 @@ echo <<<EOT
     </div>     
 EOT;
 }
+
+
 // Template footer
 function template_footer() {
 echo <<<EOT
