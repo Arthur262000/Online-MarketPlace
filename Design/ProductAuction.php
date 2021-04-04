@@ -18,7 +18,7 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<?=template_header('Product')?>
+<?=template_header('Product', $Id)?>
 <div class="d-flex" style="margin-top:100px;">
   <div class="MediumContainer containerItems pt-2">
       <div class="row m-2 align-items-center">

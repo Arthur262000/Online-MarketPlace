@@ -16,7 +16,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $total_products = $pdo->query('SELECT * FROM item')->rowCount();
 ?>
 
-<?=template_header('Video Games')?>
+<?=template_header('Video Games', $Id)?>
 
 <div class="container containerItems mt-4 pt-4">
   <h1>Video Games</h1>

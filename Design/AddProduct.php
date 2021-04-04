@@ -1,11 +1,13 @@
 <?php
+$Id = $_GET['Id'];
 if (!$Id) {
     header('Location: login.html');
 } else {
 
+    
     template_header('Add Product', $Id);
 
-echo <<<EOT
+    echo <<<EOT
                     <script language="javascript" type="text/javascript">
                     function Categories(listindex)
                     {
@@ -56,67 +58,69 @@ echo <<<EOT
                 <div class="MediumContainer containerItems mt-4 mb-4 pt-4 pb-4">
                     <h2 align="center">Add a Product</h2>
                     <hr>
-                    <div class="row">
-                        <div class="form-group col-4">
-                            <input type="text" id="Name" name="Name" class="form-control mb-4 mt-4" placeholder="Name"
-                                                aria-label="Name"></input>
-                        </div>
-                        <div class="form-group col-4">
-                            <select class="form-select mb-4 mt-4" class="required-entry" name="Category" id="Category" onchange="javascript: Categories(this.options[this.selectedIndex].value);">
-                                <option value="">-- Select Category --</option>
-                                <option value="Console">Console</option>
-                                <option value="Video-Game">Video Game</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-4">
-                        <script type="text/javascript" language="JavaScript">
-                        document.write('<select class="form-select mb-4 mt-4" name="subcategory" id="subcategory"><option value="">-- Select Sub-Category --</option></select>')
-                        </script>
-                        <noscript>
-                            <select class="form-select mb-4 mt-4" name="subcategory" id="subcategory">
-                                <option value="">-- Select Sub-Category --</option>
-                            </select>
-                        </noscript>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-auto">
-                            <input type="file" class="form-control" id="customFile"/>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-xs-8">
-                            <textarea id="Description" name="Description" class="form-control mb-4 mt-4" placeholder="Description"
-                                                aria-label="Description"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
+                    <form action="insertproduct.php?Id=$Id" method="POST">
+                        <div class="row">
                             <div class="form-group col-4">
-                                    <input type="text" class="form-control mb-3" placeholder="Price" aria-label="Price">
+                                <input type="text" id="Name" name="Name" class="form-control mb-4 mt-4" placeholder="Name"
+                                                    aria-label="Name"></input>
                             </div>
                             <div class="form-group col-4">
-                                    <select class="form-select mb-3" class="required-entry" name="Categorie" id="Categorie" onchange="javascript: SellOptions(this.options[this.selectedIndex].value);">
-                                        <option value="">-- Select Option 1 --</option>
-                                        <option value="Auction">Auction</option>
-                                        <option value="BuyItNow">Buy It Now</option>
-                                        <option value="BestOffer">Best Offer</option>
-                                    </select>                    
-                            </div>
-                            <div class="form-group col-4">
-                                <script type="text/javascript" language="JavaScript">
-                                document.write('<select class="form-select" name="option2" id="option2"><option value="">-- Select Option 2 --</option></select>')
-                                </script>
-                                <noscript>
-                                <select class="form-select" name="option2" id="option2">
-                                <option value="">-- Select Option 2 --</option>
+                                <select class="form-select mb-4 mt-4" class="required-entry" name="Category" id="Category" onchange="javascript: Categories(this.options[this.selectedIndex].value);">
+                                    <option value="">-- Select Category --</option>
+                                    <option value="Console">Console</option>
+                                    <option value="Video-Game">Video Game</option>
                                 </select>
-                                </noscript>                 
                             </div>
-                    </div>
-                    <div align='center' class="mb-3 mt-3"> 
-                        <button type="button" class="btn btn-outline-primary btn-lg" id="submit">Upload my Product
-                        </button>
-                    </div>
+                            <div class="form-group col-4">
+                            <script type="text/javascript" language="JavaScript">
+                            document.write('<select class="form-select mb-4 mt-4" name="subcategory" id="subcategory"><option value="">-- Select Sub-Category --</option></select>')
+                            </script>
+                            <noscript>
+                                <select class="form-select mb-4 mt-4" name="subcategory" id="subcategory">
+                                    <option value="">-- Select Sub-Category --</option>
+                                </select>
+                            </noscript>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-auto">
+                                <input type="file" class="form-control" id="photo" name="photo"/>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-xs-8">
+                                <textarea id="Description" name="Description" class="form-control mb-4 mt-4" placeholder="Description"
+                                                    aria-label="Description"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="form-group col-4">
+                                        <input type="text" class="form-control mb-3" name="Price" id="Price" placeholder="Price" aria-label="Price">
+                                </div>
+                                <div class="form-group col-4">
+                                        <select class="form-select mb-3" class="required-entry" name="option1" id="option1" onchange="javascript: SellOptions(this.options[this.selectedIndex].value);">
+                                            <option value="">-- Select Option 1 --</option>
+                                            <option value="Auction">Auction</option>
+                                            <option value="BuyItNow">Buy It Now</option>
+                                            <option value="BestOffer">Best Offer</option>
+                                        </select>                    
+                                </div>
+                                <div class="form-group col-4">
+                                    <script type="text/javascript" language="JavaScript">
+                                    document.write('<select class="form-select" name="option2" id="option2"><option value="">-- Select Option 2 --</option></select>')
+                                    </script>
+                                    <noscript>
+                                    <select class="form-select" name="option2" id="option2">
+                                    <option value="">-- Select Option 2 --</option>
+                                    </select>
+                                    </noscript>                 
+                                </div>
+                        </div>
+                        <div align='center' class="mb-3 mt-3"> 
+                            <button type="submit" class="btn btn-outline-primary btn-lg" id="submit">Upload my Product
+                            </button>
+                        </div>
+                    </from>
                 </div>
                 <script>
                 $(document).ready(function(){
@@ -156,9 +160,6 @@ echo <<<EOT
                 <script src="./Design/Bootstrap5/Dropzone/dropzone.js"></script>
 
                 EOT;
-                
-                template_footer();
 
-                
-
+    template_footer();
 }

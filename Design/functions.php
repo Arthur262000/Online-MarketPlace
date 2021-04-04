@@ -34,7 +34,7 @@ echo <<<EOT
     <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">   
-            <a href="Index.php">
+            <a href="Index.php?Id=$Id">
                     <img src="logo.svg" alt="Logo" style="width: 150px; padding: 2px 10px;">
                         </a>
                           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,23 +45,23 @@ echo <<<EOT
                               <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="CategoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
                                 <ul class="dropdown-menu" aria-labelledby="CategoriesDropdown">
-                                    <li><a class="dropdown-item" href="Index.php?page=Console" id="GamingConsoleDropdown" role="button" data-toggle="modal" aria-expanded="false">Gaming Console</a></li>
+                                    <li><a class="dropdown-item" href="Index.php?page=Console&Id=$Id" id="GamingConsoleDropdown" role="button" data-toggle="modal" aria-expanded="false">Gaming Console</a></li>
                                         <ul>
                                             
-                                            <a class="dropdown-item" href="Index.php?page=Console#Playstation">Playstation</a>
-                                            <a class="dropdown-item" href="Index.php?page=Console#Xbox">Xbox</a>
-                                            <a class="dropdown-item" href="Index.php?page=Console#Nintendo">Nintendo</a>
-                                            <a class="dropdown-item" href="Index.php?page=Console#Other">Other</a>
+                                            <a class="dropdown-item" href="Index.php?page=Console&Id=$Id#Playstation">Playstation</a>
+                                            <a class="dropdown-item" href="Index.php?page=Console&Id=$Id#Xbox">Xbox</a>
+                                            <a class="dropdown-item" href="Index.php?page=Console&Id=$Id#Nintendo">Nintendo</a>
+                                            <a class="dropdown-item" href="Index.php?page=Console&Id=$Id#Other">Other</a>
                                         
                                         </ul>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="Index.php?page=Video-game" class="dropdown-toggle" id="VideoGamesDropdown" role="button" data-toggle="modal" aria-expanded="false">Video Games</a></li>
+                                    <li><a class="dropdown-item" href="Index.php?page=Video-game&Id=$Id" class="dropdown-toggle" id="VideoGamesDropdown" role="button" data-toggle="modal" aria-expanded="false">Video Games</a></li>
                                         <ul>
                                             
-                                                <a class="dropdown-item" href="Index.php?page=Video-game#Action">Action</a>
-                                                <a class="dropdown-item" href="Index.php?page=Video-game#Adventure">Adventure</a>
-                                                <a class="dropdown-item" href="Index.php?page=Video-game#Battle">Battle</a>
-                                                <a class="dropdown-item" href="Index.php?page=Video-game#Sport">Sport</a>
+                                                <a class="dropdown-item" href="Index.php?page=Video-game&Id=$Id#Action">Action</a>
+                                                <a class="dropdown-item" href="Index.php?page=Video-game&Id=$Id#Adventure">Adventure</a>
+                                                <a class="dropdown-item" href="Index.php?page=Video-game&Id=$Id#Battle">Battle</a>
+                                                <a class="dropdown-item" href="Index.php?page=Video-game&Id=$Id#Sport">Sport</a>
                                             
                                         </ul>
                                     
@@ -77,7 +77,7 @@ echo <<<EOT
                                 <a class="nav-link" href="Index.php?page=Cart&Id=$Id"><img src="../Design/cart.svg"></a>
                               </li>
                             </ul>
-                            <form class="d-flex" action="search.php" method="POST">
+                            <form class="d-flex" action="search.php&Id=$Id" method="POST">
                               <input class="form-control me-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search">
                               <button class="btn btn-outline-primary" type="submit" >Search</button>
                     </form>

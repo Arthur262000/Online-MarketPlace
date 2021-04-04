@@ -15,7 +15,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // Get the total number of products
 $total_products = $pdo->query('SELECT * FROM item')->rowCount();
 ?>
-<?=template_header('Console')?>
+<?=template_header('Console', $Id)?>
 
 <div class="container containerItems mt-4 pt-4">
   <h1>Console</h1>
