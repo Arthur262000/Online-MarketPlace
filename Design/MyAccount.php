@@ -1,5 +1,4 @@
 <?php
-
 //include 'functions.php';
 
 if(!$Id){
@@ -12,10 +11,10 @@ if(!$Id){
 <div class="container containerItems mt-4 mb-4 pt-4 pb-4">
     <ul class="nav nav-tabs">
     <li class="nav-item tabs">
-        <a class="nav-link active" href="MyAccount.php">My Account</a>
+        <a class="nav-link active" href="Index.php?page=MyAccount">My Account</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="MyCard.php">My Card</a>
+        <a class="nav-link" href="Index.php?page=MyCard">My Card</a>
     </li>
     </ul>
         <div class="col-6">
