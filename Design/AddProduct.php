@@ -1,11 +1,7 @@
-<<<<<<< Updated upstream
 <?php
 if (!$Id) {
     header('Location: login.html');
 } else {
-=======
-<?=template_header('Add Product')?>
->>>>>>> Stashed changes
 
     template_header('Add Product', $Id);
 
@@ -166,9 +162,10 @@ echo <<<EOT
                     }
                 });
                 </script>
-                template_footer()
+                
                 <script src="./Design/Bootstrap5/Dropzone/dropzone.js"></script>
 
                 EOT;
+                template_footer();
 
 }?>
