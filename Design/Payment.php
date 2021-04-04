@@ -9,7 +9,8 @@
             <hr> 
             <div class="col-xs-8">
                <label type="text" id="CardNum" name="CardNum" class="mb-2 mt-2"
-                    aria-label="Card Number">Card Number</label>
+                    aria-label="Card Number">Card Number :</label>
+                    
             </div>
             <div class="form-row">
                 <div class="col-xs-8">

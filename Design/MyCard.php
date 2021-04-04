@@ -1,5 +1,4 @@
 <?php
-//include 'functions.php';
 
 if (!$Id) {
     header('Location: login.html');
@@ -17,7 +16,7 @@ if (!$Id) {
         $typecard = $card['typecard'];
     }
 
-    template_header('My Market', $a);
+    template_header('My Card', $a);
 
     echo <<<EOT
                 <div class="container containerItems mt-4 mb-4 pt-4 pb-4">
