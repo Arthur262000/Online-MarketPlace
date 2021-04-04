@@ -1,10 +1,14 @@
 <?php
 
-include 'functions.php';
+//include 'functions.php';
+
+if(!$Id){
+    header('Location: login.html');
+}
 
 ?>
 
-<?=template_header('My Market')?>
+<?=template_header('My Market', $Id)?>
 <div class="container containerItems mt-4 mb-4 pt-4 pb-4">
     <ul class="nav nav-tabs">
     <li class="nav-item tabs">

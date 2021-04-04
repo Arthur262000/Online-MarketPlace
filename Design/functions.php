@@ -13,7 +13,7 @@ function pdo_connect_mysql() {
     }
 }
 // Template header, feel free to customize this
-function template_header($title) {
+function template_header($title, $Id) {
 echo <<<EOT
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +71,7 @@ echo <<<EOT
                                 <a class="nav-link" href="Index.php?page=Sell">sell</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="Index.php?page=Login">Account</a>
+                                <a class="nav-link" href="Index.php?page=MyAccount&Id=$Id">Account</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="Index.php?page=Cart"><img src="../Design/cart.svg"></a>
@@ -145,9 +145,9 @@ if(!empty($_FILES))
 
 $result = array();
 
-$files = scandir('upload');
+//$files = scandir('upload');
 
-$output = '<div class="row">';
+/*$output = '<div class="row">';
 
 if(false !== $files)
 {
@@ -161,5 +161,5 @@ if(false !== $files)
 
 }
 $output .= '</div>';
-echo $output;
+echo $output;*/
 ?>
