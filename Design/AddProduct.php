@@ -156,7 +156,9 @@ echo <<<EOT
                 <script src="./Design/Bootstrap5/Dropzone/dropzone.js"></script>
 
                 EOT;
-
+                
                 template_footer();
 
-}?>
+                
+
+}
