@@ -240,17 +240,19 @@ $total_products = $pdo->query('SELECT * FROM item')->rowCount();
   <h1>Products</h1>
     <p><?=$total_products?> Products</p>
     <hr>
-    <div class="row">
+    <div class="row m-2">
         <?php foreach ($products as $product): ?>
+          <div class="col-3 Item mb-4">
         <a href="index.php?page=product&id=<?=$product['Id']?>">
-            <img src="Images/<?=$product['photo']?>" alt="<?=$product['name_']?>" class="colItems" width="177" height="177">
+            <img src="Images/<?=$product['photo']?>" alt="<?=$product['name_']?>" class="colItems" width="200" height="200">
             <h3 class="name"><?=$product['name_']?></h3>
             <span class="price">
                 <?=$product['price']?>&dollar;
             </span>
         </a>
-        <?php endforeach; ?>
         </div>
+        <?php endforeach; ?>
+      </div>
       </div>
     <div class="buttons">
         <?php if ($current_page > 1): ?>
