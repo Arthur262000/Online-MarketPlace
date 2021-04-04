@@ -9,8 +9,8 @@
     </li>
     </ul>
     <div align='center' class="mb-3 mt-3"> 
-                <button type="button" class="btn btn-outline-primary btn-lg" id="submit">Add a Product
-                </button>
+                <a type="button" class="btn btn-outline-primary btn-lg" id="submit" href="Index.php?page=AddProduct&Id=$Id">Add a Product
+                </a>
             </div>
 
             <?php ?>

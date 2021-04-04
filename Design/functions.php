@@ -68,7 +68,7 @@ echo <<<EOT
                                   </ul>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="Index.php?page=AddProduct&Id=$Id">sell</a>
+                                <a class="nav-link" href="Index.php?page=MyMarket&Id=$Id">sell</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="Index.php?page=MyAccount&Id=$Id">Account</a>
