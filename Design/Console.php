@@ -25,10 +25,10 @@ $total_products = $pdo->query('SELECT * FROM item')->rowCount();
         <?php foreach ($products as $product): ?>
           <div class="col-3 Item mb-4">
         <a href="index.php?page=product&id=<?=$product['Id']?>">
-            <img src="Images/<?=$product['photo']?>" alt="<?=$product['name_']?>" class="colItems" width="200" height="200">
-            <h3 class="name"><?=$product['name_']?></h3>
+            <img src="Images/<?=$product['Photo']?>" alt="<?=$product['Name_']?>" class="colItems" width="200" height="200">
+            <h3 class="name"><?=$product['Name_']?></h3>
             <span class="price">
-                <?=$product['price']?>&dollar;
+                <?=$product['Price']?>&dollar;
             </span>
         </a>
         </div>

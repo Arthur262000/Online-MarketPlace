@@ -3,7 +3,7 @@ if (!$Id) {
     header('Location: login.html');
 } else {
 
-template_header('Add Product', $Id);
+    template_header('Add Product', $Id);
 
 echo <<<EOT
                 <link rel="stylesheet" href="bootstrap5\Dropzone\dropzone.css">

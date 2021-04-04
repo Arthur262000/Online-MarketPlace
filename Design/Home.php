@@ -13,13 +13,13 @@ echo $Id;
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="Carousel1.png" class="d-block h-100 w-100" alt="...">
+            <img src="Images/Carousel1.png" class="d-block h-100 w-100" alt="Carousel1">
           </div>
           <div class="carousel-item">
-            <img src="Carousel2.jpg" class="d-block h-100 w-100" alt="...">
+            <img src="Images/Carousel2.jpg" class="d-block h-100 w-100" alt="Carousel2">
           </div>
           <div class="carousel-item">
-            <img src="Carousel3.jpg" class="d-block h-100 w-100" alt="...">
+            <img src="Images/Carousel3.jpg" class="d-block h-100 w-100" alt="Carousel3">
           </div>
            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -40,10 +40,10 @@ echo $Id;
         <?php foreach ($recently_added_products as $product): ?>
           <div class="col-3 Item mb-4">
         <a href="index.php?page=product&id=<?=$product['Id']?>">
-            <img src="Images/<?=$product['photo']?>" alt="<?=$product['name_']?>" class="colItems" width="200" height="200">
-            <h3 class="name"><?=$product['name_']?></h3>
+            <img src="Images/<?=$product['Photo']?>" alt="<?=$product['Name_']?>" class="colItems" width="200" height="200">
+            <h3 class="name"><?=$product['Name_']?></h3>
             <span class="price">
-                <?=$product['price']?>&dollar;
+                <?=$product['Price']?>&dollar;
             </span>
         </a>
         </div>
