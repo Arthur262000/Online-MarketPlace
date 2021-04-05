@@ -1,0 +1,42 @@
+"Id","Name_","Category","SubCategory","Idsell","Description","SellOption","Price","Available","Photo","Date_Added"
+"1","Playsation 5","Console","Playstation","1","<p>The PS5 is a true generational leap, offering incredibly fast load times and an innovative new controller that can change the way games feel.</p>
+<h6>For</h6>
+<ul><li>Incredibly fast SSD</li>
+<li>Wildly inventive DualSense controller</li>
+<li>Gorgeous 4K visuals</li>
+<li>Snappy, clean interface</li>
+<li>Impressive backwards compatibility</li></ul>","1","629.99","0","PS5.png","2021-04-01 12:00:12"
+"2","Playsation 4","Console","Playstation","1","<p>The PlayStation 4 offers 4K gaming and streaming, gorgeous HDR effects and a healthy game library with VR support.</p>
+<h6>Features</h6>
+<ul><li>Supports 4K gaming and streaming</li>
+<li>HDR compatible</li>
+<li>PS VR compatible</li></ul>","2","329.99","0","PS4.png","2021-03-13 17:55:22"
+"3","XBOX Serie X","Console","Xbox","2","<p>The Xbox Series X is the pinnacle of Microsoft's gaming efforts, blending the promise of powerful next-generation performance with superfast loading times and a huge library of games spanning multiple Xbox generations.</p>
+<h6>Features</h6>
+<ul><li>The only Xbox you need</li>
+<li>Lots of power</li>
+<li>Games load very fast</li>
+<li>Clean and cool design</li>
+<li>Stellar backwards compatibility</li></ul>","3","630","0","XBOX-SerieX.png","2021-02-27 21:12:34"
+"4","Nintendo Switch","Console","Nintendo","3","<p>The Nintendo Switch is a fantastic console for all kinds of gamers, even if you're not a Nintendo fan.</p>
+<h6>Features</h6>
+<ul><li>Three play modes make it convenient to use wherever</li>
+<li>Excellent variety of available games</li>
+<li>Smartly designed controls</li></ul>","2","229","0","Nintendo-Switch.png","2021-01-30 19:42:20"
+"21","Xbox 360","Console","Xbox","2","Rediscover the pleasure of playing retro games with the Xbox 360","4","99.99","1",NULL,"2000-01-01 00:00:00"
+"5","Playstation 2","Console","Playstation","5","<p>Description</p>","2","69.99","0","PS2.png","2021-12-03 14:02:31"
+"6","Call Of Duty BO2","Video-Game","Action","8","<p>FPS For PS3</p>","3","9.99","0","CoDBlackOps2.jpg","2021-04-02 20:30:05"
+"7","Mortal Kombat 11","Video-Game","Battle","9","<p>Fight Game For Xbox One</p>","2","19.99","0","MortalKombat11.jpg","2021-04-02 21:20:05"
+"8","Mario Tennis","Video-Game","Sport","10","<p>Play Tennis with Mario on GameCube</p>","3","12.99","0","MarioTennis.jpg","2021-04-02 22:48:05"
+"9","Fifa 19","Video-Game","Sport","9","<p>Football Game for Xbox One</p>","1","49.99","0","Fifa19.jpg","2021-04-04 13:20:12"
+"10","Nintendo DS Lite","Console","Nintendo","10","<p>Play anywhere and anytime!</p>","2","79.99","0","Nintendo-DS-Lite.png","2021-03-21 21:37:05"
+"11","Nintendo Wii","Console","Nintendo","10","<p>Play with Friends and Family!</p>","2","89.99","0","Nintendo-Wii.png","2021-04-01 22:37:05"
+"12","The Last Of Us 2","Video-Game","Adventure","9","<p>Follow Joel and Ellie in an dangerous post-apocayptic world and try to survive</p>","1","69.99","0","TheLastOfUs2.jpg","2021-03-21 14:27:43"
+"13","Tekken 5","Video-Game","Battle","9","<p>Fight Game for Playsation 2</p>","3","9.5","0","Tekken5.jpg","2021-04-01 13:53:43"
+"14","Red Dead Redemption 2","Video-Game","Adventure","1","<p>Explore an endless world in the Far West</p>","2","65.5","0","RedDeadRedemption2.jpg","2021-04-04 11:27:43"
+"15","Game Cube","Console","Nintendo","7","<p>Enter the Cube and play with friends!</p>","1","69.99","0","Nintendo-GameCube.png","2021-03-26 09:37:43"
+"16","Mario Kart 8 Deluxe","Video-Game","Sport","4","<p>The best game for loosing friends!</p>","2","40","0","MarioKart8Deluxe.jpg","2021-04-01 18:12:03"
+"17","Nintendo Wii U","Console","Nintendo","4","<p>New Nintendo Wii with a new screen-integrated controller</p>","1","79.99","0","Nintendo-Wii-U.png","2021-03-30 14:27:43"
+"18","Xbox One S","Console","Xbox","15","<p>Faster and Thinner than before</p>","2","369.99","0","XBOX-One-S.png","2021-04-02 16:27:43"
+"19","Playstation 1","Console","Playstation","14","<p>Discover the first playstation ever created!</p>","4","50.99","0","PS1.png","2021-04-01 18:45:23"
+"20","GameBoy","Console","Nintendo","1","<p>Rediscover the 90s!</p>","5","100","0","Nintendo-GameBoy.png","2021-04-04 11:57:58"

@@ -108,8 +108,8 @@ if ($products_in_cart) {
         </div>
         <div align="end">
             <!-- Redirige vers la page Payment -->
-        <button type="button" class="btn btn-outline-primary btn-lg m-4" id="submit">Payment &#187;
-                </button>
+        <a type="button" class="btn btn-outline-primary btn-lg m-4" id="submit" href="Index.php?page=Payment&Id=$Id">Payment &#187;</a>
+                </type=>
         </div>
     </form>
 </div>
