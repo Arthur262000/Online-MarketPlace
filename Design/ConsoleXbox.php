@@ -3,7 +3,7 @@
 // The current page, in the URL this will appear as index.php?page=products&p=1, index.php?page=products&p=2, etc...
 $current_page = isset($_GET['p']) && is_numeric($_GET['p']) ? (int)$_GET['p'] : 1;
 // Select products ordered by the date added
-$stmt = $pdo->prepare('SELECT * FROM item WHERE Category="Console" ORDER BY Date_Added DESC');
+$stmt = $pdo->prepare('SELECT * FROM item WHERE Category="Console" AND SubCategory="Xbox" ORDER BY Date_Added DESC');
 // bindValue will allow us to use integer in the SQL statement, we need to use for LIMIT
 
 $stmt->execute();
@@ -11,12 +11,12 @@ $stmt->execute();
 $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Get the total number of products
-$total_products_consoles = $pdo->query('SELECT * FROM item WHERE Category="Console"')->rowCount();
+$total_products_consoles = $pdo->query('SELECT * FROM item WHERE Category="Console" AND SubCategory="Xbox"')->rowCount();
 ?>
-<?=template_header('Console', $Id)?>
+<?=template_header('Console | Xbox', $Id)?>
 
 <div class="container containerItems mt-4 pt-4">
-  <h1>Console</h1>
+  <h1>Console | Xbox</h1>
     <p><?=$total_products_consoles?> Products</p>
     <hr>
     <div class="row m-2">
