@@ -3,3 +3,16 @@ INSERT INTO `item` (`Id`, `name_`, `categorie`, `Idsell`, `description`, `sellOp
 (2, 'Wallet', '', '14.99', '19.99', 34, 'wallet.jpg', '2019-03-13 18:52:49'),
 (3, 'Headphones', '', '19.99', '0.00', 23, 'headphones.jpg', '2019-03-13 18:47:56'),
 (4, 'Digital Camera', '', '69.99', '0.00', 7, 'camera.jpg', '2019-03-13 17:42:04');
+
+1 auction
+2 buyitnow
+3 bestoffer
+
+4 auction buyitnow
+
+5 buyitnow auction
+6 buyitnow bestoffer
+
+7 bestoffer buyitnow
+
+
