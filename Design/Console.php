@@ -31,7 +31,7 @@ echo <<<EOT
                   $photo = base64_encode($product['Photo']);
                 ?>
                   <div class="col-3 Item mb-4">
-                    <a href="index.php?page=product&IdItem=<?= $product['Id'] ?>&Id=<?=$Id?>">
+                    <a href="index.php?page=product&IdItem=<?=$product['Id']?>&Id=<?=$Id?>">
                       <img src="data:image/png;base64,<?$photo?>" alt="<?= $product['Name_'] ?>" class="colItems" width="200" height="200">
                       <h3 class="name"><?= $product['Name_'] ?></h3>
                       <span class="price">
