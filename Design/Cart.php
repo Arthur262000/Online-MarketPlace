@@ -1,4 +1,3 @@
-
 <?php
 // If the user clicked the add to cart button on the product page we can check for the form data
 if (isset($_POST['product_id'])) {
@@ -26,8 +25,6 @@ if (isset($_POST['product_id'])) {
     header('location: index.php?page=Cart');
     exit;
 }
-
-
 // Remove product from cart, check for the URL param "remove", this is the product id, make sure it's a number and check if it's in the cart
 if (isset($_GET['remove']) && is_numeric($_GET['remove']) && isset($_SESSION['cart']) && isset($_SESSION['cart'][$_GET['remove']])) {
     // Remove the product from the shopping cart

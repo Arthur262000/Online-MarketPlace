@@ -9,8 +9,8 @@ if (!$Id) {
     $option = $_GET['option'];
     $success = 0;
     if ($option == 1) {
-        $price = $_POST['price'];
-        $amb = $_POST['automaxbid'];
+        $price = $_POST['bid'];
+        $amb = $_POST['AutoMaxbid'];
         $bestoffer = 0;
     } elseif ($option == 2) {
         $price = $_GET['price'];
