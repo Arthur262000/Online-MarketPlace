@@ -27,12 +27,10 @@ echo <<<EOT
               <hr>
               <div class="row m-2">
               EOT;
-                 foreach ($products as $product) :
-                  $photo = base64_encode($product['Photo']);
-                ?>
+                 foreach ($products as $product) :?>
                   <div class="col-3 Item mb-4">
                     <a href="index.php?page=product&IdItem=<?=$product['Id']?>&Id=<?=$Id?>">
-                      <img src="data:image/png;base64,<?$photo?>" alt="<?= $product['Name_'] ?>" class="colItems" width="200" height="200">
+                      <img src="Images/<?=$product['Photo']?>" alt="<?= $product['Name_'] ?>" class="colItems" width="200" height="200">
                       <h3 class="name"><?= $product['Name_'] ?></h3>
                       <span class="price">
                         <?= $product['Price'] ?>&dollar;
@@ -44,7 +42,5 @@ echo <<<EOT
               </div>
             </div>
 EOT;
-/**
- * 
- */
+
 template_footer();}?>

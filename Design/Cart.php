@@ -32,8 +32,8 @@ if (isset($_GET['remove']) && is_numeric($_GET['remove']) && isset($_SESSION['ca
 }
 
 // Send the user to the place order page if they click the Place Order button, also the cart should not be empty
-if (isset($_POST['placeorder']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-    header('Location: index.php?page=placeorder');
+if (isset($_POST['Payment']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+    header('Location: index.php?page=payment&Id=$Id');
     exit;
 }
 
@@ -83,7 +83,7 @@ if ($products_in_cart) {
                     <tr>
                         <td class="img mt-2 mb-2">
                             <a href="index.php?page=product&id=<?=$product['Id']?>">
-                                <img src="Images/<?=$product['photo']?>" width="50" height="50" alt="<?=$product['name_']?>">
+                                <img src="Images/<?=$product['Photo']?>" width="50" height="50" alt="<?=$product['name_']?>">
                             </a>
                         </td>
                         <td>
@@ -105,7 +105,7 @@ if ($products_in_cart) {
         </div>
         <div align="end">
             <!-- Redirige vers la page Payment -->
-        <a type="button" class="btn btn-outline-primary btn-lg m-4" id="submit" href="Index.php?page=Payment&Id=$Id">Payment &#187;</a>
+        <a type="button" class="btn btn-outline-primary btn-lg m-4" id="submit" href="Payment">Payment &#187;</a>
                 </type=>
         </div>
     </form>
