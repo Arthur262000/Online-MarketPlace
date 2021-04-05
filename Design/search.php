@@ -1,29 +1,43 @@
 <?php
 
-$mysqli = new mysqli("localhost", "root", "", "projet1");
+$connection = new mysqli('localhost', 'root', '', 'webmarket');
+
 $search = $_POST['search'];
-$query = "SELECT * from log WHERE login LIKE '% $login %' ;";
 
 
+$query = "SELECT Categorie FROM item WHERE Categorie LIKE '%".$search."%'";
+$products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+template_header('Search');
 
-if(!$mysqli){
-    echo"Database Connection Error...".mysqli_connect_error();
+echo <<<EOT
 
-} else{
-    echo"<h3>Database Connection Success....</h3>";
-    echo $query;
-    if($result = mysqli_query($mysqli, $query)){
-        echo mysqli_num_rows($result);  
-        //echo $result;
-        
-        $row = mysqli_fetch_array($result);
-        echo $row[0];
-    }
-    else{
-        echo "<br>pas vu ";
-    }
+<div class="container containerItems mt-4 pt-4">
+<h1>$search</h1>
+<p>Products</p>
+<hr>
+<div class="row m-2">
+EOT;
+foreach ($products as $product) :
+    if ($product['Name_'] = $search){
+        echo <<< EOT
 
-}
+        <div class="col-3 Item mb-4">
+        <a href="index.php?page=product&IdItem=<?=$product['Id']?>&Id=<?=$Id?>">
+    <img src="Images/<?=$product['Photo']?>" alt="<?= $product['Name_'] ?>" class="colItems" width="200" height="200">
+    <h3 class="name"><?= $product['Name_'] ?></h3>
+    <span class="price">
+      <?= $product['Price'] ?>&dollar;
+    </span>
+  </a>
+</div> 
+EOT;
 
+    } ?>
 
-mysqli_close($mysqli);
+<?php endforeach;
+echo <<<EOT
+</div>
+</div>
+EOT;
+
+mysqli_close($connection);
