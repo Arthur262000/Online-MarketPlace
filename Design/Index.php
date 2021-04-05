@@ -8,7 +8,6 @@ $page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['pag
 //ini_set('display_errors','off');
 $Id = $_GET['Id'];
 
-//echo "<label> Id : $Id </label>";
 
 // Include and show the requested page
 include $page . '.php';

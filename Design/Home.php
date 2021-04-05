@@ -3,7 +3,6 @@
 $stmt = $pdo->prepare('SELECT * FROM item ORDER BY Date_Added DESC LIMIT 4');
 $stmt->execute();
 $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-echo $Id;
 ?>
 
 <?=template_header('Home', $Id)?>
