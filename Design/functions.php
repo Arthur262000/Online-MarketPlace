@@ -76,7 +76,7 @@ echo <<<EOT
                                 <a class="nav-link" href="Index.php?page=Cart&Id=$Id"><img src="../Design/cart.svg"></a>
                               </li>
                             </ul>
-                            <form class="d-flex" action="search.php&Id=$Id" method="POST">
+                            <form class="d-flex" action="search.php" method="POST">
                               <input class="form-control me-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search">
                               <button class="btn btn-outline-primary" type="submit" >Search</button>
                     </form>
@@ -129,6 +129,4 @@ echo <<<EOT
 </body>
 
 </html>
-EOT;
-}
-?>
+EOT;}?>
