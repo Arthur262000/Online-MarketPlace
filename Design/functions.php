@@ -48,20 +48,19 @@ echo <<<EOT
                                     <li><a class="dropdown-item" href="Index.php?page=Console&Id=$Id" id="GamingConsoleDropdown" role="button" data-toggle="modal" aria-expanded="false">Gaming Console</a></li>
                                         <ul>
                                             
-                                            <a class="dropdown-item" href="Index.php?page=Console&Id=$Id#Playstation">Playstation</a>
-                                            <a class="dropdown-item" href="Index.php?page=Console&Id=$Id#Xbox">Xbox</a>
-                                            <a class="dropdown-item" href="Index.php?page=Console&Id=$Id#Nintendo">Nintendo</a>
-                                            <a class="dropdown-item" href="Index.php?page=Console&Id=$Id#Other">Other</a>
+                                            <a class="dropdown-item" href="Index.php?page=ConsolePlaystation&Id=$Id">Playstation</a>
+                                            <a class="dropdown-item" href="Index.php?page=ConsoleXbox&Id=$Id">Xbox</a>
+                                            <a class="dropdown-item" href="Index.php?page=ConsoleNintendo&Id=$Id">Nintendo</a>
                                         
                                         </ul>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="Index.php?page=Video-game&Id=$Id" class="dropdown-toggle" id="VideoGamesDropdown" role="button" data-toggle="modal" aria-expanded="false">Video Games</a></li>
                                         <ul>
                                             
-                                                <a class="dropdown-item" href="Index.php?page=Video-game&Id=$Id#Action">Action</a>
-                                                <a class="dropdown-item" href="Index.php?page=Video-game&Id=$Id#Adventure">Adventure</a>
-                                                <a class="dropdown-item" href="Index.php?page=Video-game&Id=$Id#Battle">Battle</a>
-                                                <a class="dropdown-item" href="Index.php?page=Video-game&Id=$Id#Sport">Sport</a>
+                                                <a class="dropdown-item" href="Index.php?page=Video-GameAction&Id=$Id">Action</a>
+                                                <a class="dropdown-item" href="Index.php?page=Video-GameAdventure&Id=$Id">Adventure</a>
+                                                <a class="dropdown-item" href="Index.php?page=Video-GameBattle&Id=$Id">Battle</a>
+                                                <a class="dropdown-item" href="Index.php?page=Video-GameSport&Id=$Id">Sport</a>
                                             
                                         </ul>
                                     
