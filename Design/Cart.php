@@ -60,7 +60,7 @@ if ($products_in_cart) {
     }
 }
 ?>
-<?=template_header('Cart')?>
+<?=template_header('Cart', $Id)?>
 
 <div class="container containerItems pt-4 mt-4 mb-4">
     <h1>Cart</h1>

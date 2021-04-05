@@ -1,23 +1,26 @@
 <?php
-// Check to make sure the id parameter is specified in the URL
-if (isset($_GET['id'])) {
-    // Prepare statement and execute, prevents SQL injection
-    $stmt = $pdo->prepare('SELECT * FROM item WHERE Id = ?');
-    $stmt->execute([$_GET['id']]);
-    // Fetch the product from the database and return the result as an Array
-    $product = $stmt->fetch(PDO::FETCH_ASSOC);
-    // Check if the product exists (array is not empty)
-    if (!$product) {
-        // Simple error to display if the id for the product doesn't exists (array is empty)
-        exit('Product does not exist!');
-    }
+
+if (!$Id) {
+  header('Location: login.html');
 } else {
-    // Simple error to display if the id wasn't specified
-    exit('Product does not exist!!');
-}
+  $Id = $_GET['Id'];
+  $IdItem = $_GET['IdItem'];
+  echo "ID ITEM = $IdItem";
+
+  $stmt = $pdo->prepare("SELECT * FROM item WHERE Id = $IdItem;");
+  $stmt->execute();
+  // Fetch the product from the database and return the result as an Array
+  $pros = $stmt->fetch(PDO::FETCH_ASSOC);
+  $total_products_consoles = $pdo->query("SELECT * FROM item WHERE Id = $IdItem;")->rowCount();
+
+  $photo = $pros['Photo'];
+  $name = $pros['Name_'];
+  $description = $pros['Description'];
+  $Price = $pros['Price'];
+
 ?>
 
-<?=template_header('Product'? $Id)?>
+<?=template_header('Product', $Id)?>
 
   <div class="container containerItems pt-4" style="width: 850px; margin-top:102px; margin-bottom:102px">
     <div id="Product">

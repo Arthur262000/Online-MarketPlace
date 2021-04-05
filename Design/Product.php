@@ -1,26 +1,10 @@
 <?php
-// Check to make sure the id parameter is specified in the URL
-/*if (isset($_GET['IdItem'])) {
-    // Prepare statement and execute, prevents SQL injection
-    $stmt = $pdo->prepare('SELECT * FROM item WHERE Id = ?');
-    $stmt->execute([$_GET['id']]);
-    // Fetch the product from the database and return the result as an Array
-    $product = $stmt->fetch(PDO::FETCH_ASSOC);
-    // Check if the product exists (array is not empty)
-//     if (!$product) {
-//         // Simple error to display if the id for the product doesn't exists (array is empty)
-//         exit('Product does not exist!');
-//     }
-// } else {
-//     // Simple error to display if the id wasn't specified
-//     exit('Product does not exist!!');
-}*/
+
 if (!$Id) {
     header('Location: login.html');
 } else {
     $Id = $_GET['Id'];
     $IdItem = $_GET['IdItem'];
-    echo "ID ITEM = $IdItem";
 
     $stmt = $pdo->prepare("SELECT * FROM item WHERE Id = $IdItem;");
     $stmt->execute();
@@ -40,7 +24,7 @@ if (!$Id) {
                     <div class="row m-2 align-items-center">
                         <div class="col-6">
                         <div class="colItems mb-4">
-                            <img src="Images/" width="300" height="300" alt="$name">
+                            <img src="Images/$photo" width="300" height="300" alt="$name">
                             </div>
                         </div>
                         <div class="col-6">
@@ -57,26 +41,26 @@ if (!$Id) {
             echo '<a type="btn" href="Index.php?page=ProductAuction&Id=' . $Id . '&IdItem=' . $IdItem . '" class="btn btn-outline-primary p-2 m-2 btn-lg">Auction</a>';
             break;
         case  2:
-            echo '<button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg" >Buy It Now</button>';
+            echo '<a type="btn" href="Index.php?page=ProductBuyItNow&Id=' . $Id . '&IdItem=' . $IdItem . '" class="btn btn-outline-primary p-2 m-2 btn-lg" >Buy It Now</a>';
             break;
         case  3:
-            echo '<button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg">Best Offer</button>';
+            echo '<a type="btn" href="Index.php?page=ProductBestOffer&Id=' . $Id . '&IdItem=' . $IdItem . '" class="btn btn-outline-primary p-2 m-2 btn-lg">Best Offer</a>';
             break;
         case  4:
-            echo '<button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg">Auction</button>
-                      <button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg" >Buy It Now</button>';
+            echo '<a type="btn" href="Index.php?page=ProductAuction&Id=' . $Id . '&IdItem=' . $IdItem . '" class="btn btn-outline-primary p-2 m-2 btn-lg">Auction</a>
+            <a type="btn" href="Index.php?page=ProductBuyItNow&Id=' . $Id . '&IdItem=' . $IdItem . '" class="btn btn-outline-primary p-2 m-2 btn-lg" >Buy It Now</a>';
             break;
         case  5:
-            echo '<button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg" >Buy It Now</button>
-                      <button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg">Auction</button>';
+            echo '<a type="btn" href="Index.php?page=ProductBuyItNow&Id=' . $Id . '&IdItem=' . $IdItem . '" class="btn btn-outline-primary p-2 m-2 btn-lg" >Buy It Now</a>
+            <a type="btn" href="Index.php?page=ProductAuction&Id=' . $Id . '&IdItem=' . $IdItem . '" class="btn btn-outline-primary p-2 m-2 btn-lg">Auction</a>';
             break;
         case  6:
-            echo '<button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg" >Buy It Now</button>
-                      <button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg">Best Offer</button>';
+            echo '<a type="btn" href="Index.php?page=ProductBuyItNow&Id=' . $Id . '&IdItem=' . $IdItem . '" class="btn btn-outline-primary p-2 m-2 btn-lg" >Buy It Now</a>
+            <a type="btn" href="Index.php?page=ProductBestOffer&Id=' . $Id . '&IdItem=' . $IdItem . '" class="btn btn-outline-primary p-2 m-2 btn-lg">Best Offer</a>';
             break;
         case  7:
-            echo '<button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg">Best Offer</button>
-                      <button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg">Buy It Now</button>';
+            echo '<a type="btn" href="Index.php?page=ProductBestOffer&Id=' . $Id . '&IdItem=' . $IdItem . '" class="btn btn-outline-primary p-2 m-2 btn-lg">Best Offer</a>
+            <a type="btn" href="Index.php?page=ProductBuyItNow&Id=' . $Id . '&IdItem=' . $IdItem . '" class="btn btn-outline-primary p-2 m-2 btn-lg">Buy It Now</a>';
             break;
     }
     echo <<<EOT
