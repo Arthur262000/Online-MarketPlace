@@ -23,7 +23,7 @@ if (!$Id) {
 echo <<<EOT
                 <div class="container containerItems mt-4 pt-4">
                   <h1>Console</h1>
-                  <p><?= $total_products_consoles ?> Products</p>
+                  <p> $total_products_consoles Products</p>
               <hr>
               <div class="row m-2">
               EOT;
