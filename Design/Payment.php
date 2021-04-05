@@ -1,32 +1,36 @@
 <?php
 
-if (isset($_GET['id'])) {
+if (isset($_GET['Id'])) {
+
+if(isset($_GET['tot'])){
+    $price = $_GET['tot'];
+}   
 
 $stmt = $pdo->prepare('SELECT * FROM payement WHERE Id = ?');
-$stmt->execute([$_GET['id']]);
+$stmt->execute([$_GET['Id']]);
 $payment = $stmt->fetch(PDO::FETCH_ASSOC);
 $stmt = $pdo->prepare('SELECT * FROM cart WHERE Id = ?');
-$stmt->execute([$_GET['id']]);
-$products = $stmt->fetch(PDO::FETCH_ASSOC);
+$stmt->execute([$_GET['Id']]);
+$products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Get the total number of products
-$total_products = $pdo->query('SELECT * FROM cart WHERE Id = ?')->rowCount();
+//$total_products = $pdo->query('SELECT * FROM cart WHERE Id = ')->rowCount();
 
 $stmt = $pdo->prepare('SELECT * FROM members WHERE Id = ?');
-$stmt->execute([$_GET['id']]);
+$stmt->execute([$_GET['Id']]);
 $member = $stmt->fetch(PDO::FETCH_ASSOC);
 
 //For the sum of total price
-$stmt = $handler->prepare('SELECT SUM(Price) AS value_sum FROM item');
+/*$stmt = $handler->prepare('SELECT SUM(Price) AS value_sum FROM cart Where Idmember');
 $stmt->execute();
 
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
-$sum = $row['value_sum'];
+$sum = $row['value_sum'];*/
 }
 
 ?>
 
-<?=template_header('Payment',$Id)?>
+<?=template_header('Payment', $Id)?>
 
 <div style="margin-top:100px;">
     <div class="MediumContainer containerItems">
@@ -34,22 +38,14 @@ $sum = $row['value_sum'];
             <div class="col-md-4 order-md-2 mb-4">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                     <span class="text-muted">Your cart</span>
-                    <span class="badge badge-secondary badge-pill"><?=$total_products?></span>
+                    
                 </h4>
                 <ul class="list-group mb-3">
-                    <? foreach $products as $product : ?>
-                    <li class="list-group-item d-flex justify-content-between lh-condensed">
-                        <div>
-                            <h6 class="my-0"><?=$product['Name_']?></h6>
-                        </div>
-                        <span class="text-muted"><?=$product['Price']?></span>
-                    </li>
-                    <? endforeach; ?>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 class="my-0">Total</h6>
                         </div>
-                        <span class="text-muted"><?=$sum?></span>
+                        <span class="text-muted"><?=$price?></span>
                     </li>
                 </ul>
                 </div>

@@ -1,6 +1,6 @@
 <?php
 // If the user clicked the add to cart button on the product page we can check for the form data
-if (isset($_POST['product_id'])) {
+/*if (isset($_POST['product_id'])) {
     // Set the post variables so we easily identify them, also make sure they are integer
     $product_id = (int)$_POST['product_id'];
     // Prepare the SQL statement, we basically are checking if the product exists in our databaser
@@ -55,60 +55,96 @@ if ($products_in_cart) {
     foreach ($products as $product) {
         $subtotal += (float)$product['price'] * (int)$products_in_cart[$product['Id']];
     }
-}
+}*/
+if (!$Id) {
+    header('Location: login.html');
+} else {
+    $Id = $_GET['Id'];
+    //$IdItem = $_GET['IdItem'];
+    $totprice = 0;
+
+
+
 ?>
-<?=template_header('Cart', $Id)?>
 
-<div class="container containerItems pt-4 mt-4 mb-4">
-    <h1>Cart</h1>
-    <hr>
-    <form action="index.php?page=Cart" method="post">
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Product</th>
-                    <th scope="col">Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php if (empty($products)): ?>
-                <tr>
-                    <td colspan="2" align="center">You have no products added in your Shopping Cart</td>
-                </tr>
-                <!-- En dessous, essaye de faire fonctionner le php en ajoutant un item au cart
-                et dis moi si la disposition est bonne -->
-                <?php else: ?>
-                <?php foreach ($products as $product): ?> 
-                    <tr>
-                        <td class="img mt-2 mb-2">
-                            <a href="index.php?page=product&id=<?=$product['Id']?>">
-                                <img src="Images/<?=$product['Photo']?>" width="50" height="50" alt="<?=$product['name_']?>">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="index.php?page=product&id=<?=$product['Id']?>"><?=$product['name_']?></a>
-                            <br>
-                            <a href="index.php?page=cart&remove=<?=$product['Id']?>" class="remove">Remove</a>
-                        </td>
-                        <td class="price"><?=$product['price']?>&dollar;</td>
-                </tr>
-                <?php endforeach; ?>
-                <?php endif; ?>
-            </tbody>
-        </table>
-        <div align="end" class="m-4">
-            <span class="text">Total :</span>
-            <!-- Afficher le prix total en additionnant le prix des items -->
-            <span class="price"><?//=$total?>&dollar;</span>
-        </div>
-        </div>
-        <div align="end">
-            <!-- Redirige vers la page Payment -->
-        <a type="button" class="btn btn-outline-primary btn-lg m-4" id="submit" href="Payment">Payment &#187;</a>
+    <?= template_header('Cart', $Id) ?>
+
+    <div class="container containerItems pt-4 mt-4 mb-4">
+        <h1>Cart</h1>
+        <hr>
+        <form action="index.php?page=Cart&Id=<?= $Id ?>" method="POST">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $stmt4 = $pdo->prepare("SELECT * FROM cart where Idmember = $Id;");
+                        $stmt4->execute();
+                        $total_products_consoles = $pdo->query("SELECT * FROM cart WHERE Idmember = $Id;")->rowCount();
+                        // Fetch the product from the database and return the result as an Array
+
+                        $p1 = $stmt4->fetchAll(PDO::FETCH_ASSOC);
+
+                        if (empty($p1)) :
+                            echo '
+                                <tr>
+                                    <td colspan="2" align="center">You have no products added in your Shopping Cart</td>
+                                </tr>
+                                    ';
+                        else :
+                            foreach ($p1 as $p2) :
+                                $idtmp = $p2['IdItem'];
+                                $Idcart = $p2['Id'];
+                                $stmt2 = $pdo->prepare("SELECT * FROM item WHERE Id = $idtmp;");
+                                $stmt2->execute();
+                                $pro = $stmt2->fetch(PDO::FETCH_ASSOC);
+                                $photo = $pro['Photo'];
+                                $idpro = $pro['Id'];
+                                $name = $pro['Name_'];
+                                $price = $pro['Price'];
+                                $totprice += $price;
+
+
+                                echo <<<EOT
+                                        <tr>
+                                            <td class="img mt-2 mb-2">
+                                                <a href="index.php?page=product&id=$idpro">
+                                                    <img src="Images/$photo" width="50" height="50" alt="$name">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="index.php?page=product&id=$idpro&Id=$Id"> $name </a>
+                                                <br>
+                                                <a href="index.php?page=remove&Idr=$Idcart&Id=$Id" class="remove">Remove</a>
+                                            </td>
+                                            <td class="price"> $price&dollar;</td>
+                                        </tr>
+                                    EOT;
+                            endforeach;
+                        endif; ?>
+                    </tbody>
+                </table>
+                <div align="end" class="m-4">
+                    
+                    <span class="text">Total : <?=$totprice?></span>
+                    <!-- Afficher le prix total en additionnant le prix des items -->
+                    <span class="price">
+                        <?//=$total?>&dollar;
+                    </span>
+                </div>
+            </div>
+            <div align="end">
+                <!-- Redirige vers la page Payment -->
+                <a type="button" class="btn btn-outline-primary btn-lg m-4" id="submit" href="index.php?page=Payment&Id=<?=$Id?>&tot=<?=$totprice?>">Payment &#187;</a>
                 </type=>
-        </div>
-    </form>
-</div>
+            </div>
+        </form>
+    </div>
 
-<?=template_footer()?>
+<?= template_footer();
+} ?>
