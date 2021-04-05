@@ -40,16 +40,14 @@ if (!$Id) {
         }
     }
 
-    /*$photo = file_get_contents($_FILES['photo']['tmp_name']);
-    $image = $_FILES['photo']['tmp_name'];
-    $image = base64_encode(file_get_contents(addslashes($image)));*/
+    $photo = addslashes(file_get_contents($_FILES['photo']['tmp_name']));
 
     $date = date('Y/m/d');
 
 
 
-    $query = "INSERT INTO item (Name_, Category, SubCategory, Idsell, Description, SellOption, Price, Available, Date_Added)
-     values ('$name', '$cat', '$sub', '$Id', '$description', $option, $price, true, $date);";
+    $query = "INSERT INTO item (Name_, Category, SubCategory, Idsell, Description, SellOption, Price, Available,Photo, Date_Added)
+     values ('$name', '$cat', '$sub', '$Id', '$description', $option, $price, true, $photo, $date);";
 
     if (!$mysqli) {
         echo "Database Connection Error..." . mysqli_connect_error();
