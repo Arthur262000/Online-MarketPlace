@@ -1,6 +1,11 @@
+<?php
+if (!$Id) {
+    header('Location: login.html');
+} else {
 
+template_header('Payment');
 
-<?=template_header('Payment')?>
+echo <<<EOT
 
 <div class="MediumContainer containerItems">
     <div class="col-6">

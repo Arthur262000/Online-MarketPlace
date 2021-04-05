@@ -84,7 +84,7 @@ if (!$Id) {
                         </div>
                         <div class="form-row">
                             <div class="form-group col-auto">
-                                <input type="file" class="form-control" id="photo" name="photo"/>
+                                <input type="file" class="form-control" id="Photo" name="Photo"/>
                             </div>
                         </div>
                         <div class="form-row">
