@@ -27,7 +27,7 @@ if (!$Id) {
       <div class="row m-2 align-items-center">
         <div class="col-6">
           <div class="colItems">
-            <img src="Images/<?=$product['photo']?>" width="300" height="300" alt="<?=$product['name_']?>">
+            <img src="Images/<?=$photo?>" width="300" height="300" alt="<?=$product['name_']?>">
             </div>
         </div>
         <div class="col-6">
@@ -50,4 +50,4 @@ if (!$Id) {
   </div>
 </div>
 
-<?=template_footer()?>
+<?=template_footer();}?>

@@ -14,6 +14,7 @@ if (!$Id) {
     $option1 = $_POST['option1'];
     $option2 = $_POST['option2'];
     $option = 0;
+    $photo = $_FILES['Photo']['name'];
 
     if ($option2 == "") {
         if ($option1 == "Auction") {
@@ -39,8 +40,7 @@ if (!$Id) {
         }
     }
 
-    $photo = $_FILES['Photo']['tmp_name'];
-    $photo = base64_encode(file_get_contents(addslashes($photo)));
+   
 
     $date = date("Y-m-d H:i:s");
 
