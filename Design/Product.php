@@ -23,15 +23,15 @@ if (isset($_GET['id'])) {
       <div class="row m-2 align-items-center">
         <div class="col-6">
           <div class="colItems mb-4">
-             <img src="Images/<?//=$product['photo']?>" width="300" height="300" alt="<?//=$product['name_']?>">
+             <img src="Images/<?=$product['Photo']?>" width="300" height="300" alt="<?=$product['Name_']?>">
             </div>
         </div>
         <div class="col-6">
-                <h3>Name<?//=$product['name_']?></h3>
+                <h3><?=$product['Name_']?></h3>
                 <hr>
                 <h5>Description</h5>
                 <br>
-                <p>Description<?//=$product['description']?></p>
+                <p><?=$product['Description']?></p>
                 <hr>
                 <div class="form-row mt-4">
                     <button type="submit" class="btn btn-outline-primary p-2 m-2 btn-lg" disabled>Buy It Now</button>

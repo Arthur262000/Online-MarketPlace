@@ -1,6 +1,6 @@
 <?php
 // The amounts of products to show on each page
-$num_products_on_each_page = 4;
+$num_products_on_each_page = 30;
 // The current page, in the URL this will appear as index.php?page=products&p=1, index.php?page=products&p=2, etc...
 $current_page = isset($_GET['p']) && is_numeric($_GET['p']) ? (int)$_GET['p'] : 1;
 // Select products ordered by the date added
@@ -24,7 +24,7 @@ $total_products = $pdo->query('SELECT * FROM item')->rowCount();
     <div class="row m-2">
         <?php foreach ($products as $product): ?>
           <div class="col-3 Item mb-4">
-        <a href="index.php?page=product&id=<?=$product['Id']?>">
+          <a href="index.php?page=product&id=<?=$product['Id']?>">
             <img src="Images/<?=$product['Photo']?>" alt="<?=$product['Name_']?>" class="colItems" width="200" height="200">
             <h3 class="name"><?=$product['Name_']?></h3>
             <span class="price">
@@ -34,15 +34,6 @@ $total_products = $pdo->query('SELECT * FROM item')->rowCount();
         </div>
         <?php endforeach; ?>
       </div>
-      </div>
-    <div class="buttons">
-        <?php if ($current_page > 1): ?>
-        <a href="index.php?page=products&p=<?=$current_page-1?>">Prev</a>
-        <?php endif; ?>
-        <?php if ($total_products > ($current_page * $num_products_on_each_page) - $num_products_on_each_page + count($products)): ?>
-        <a href="index.php?page=products&p=<?=$current_page+1?>">Next</a>
-        <?php endif; ?>
-    </div>
 </div>
 
 <?=template_footer()?>
