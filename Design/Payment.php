@@ -8,12 +8,20 @@ $payment = $stmt->fetch(PDO::FETCH_ASSOC);
 $stmt = $pdo->prepare('SELECT * FROM cart WHERE Id = ?');
 $stmt->execute([$_GET['id']]);
 $products = $stmt->fetch(PDO::FETCH_ASSOC);
+
 // Get the total number of products
 $total_products = $pdo->query('SELECT * FROM cart WHERE Id = ?')->rowCount();
 
 $stmt = $pdo->prepare('SELECT * FROM members WHERE Id = ?');
 $stmt->execute([$_GET['id']]);
 $member = $stmt->fetch(PDO::FETCH_ASSOC);
+
+//For the sum of total price
+$stmt = $handler->prepare('SELECT SUM(Price) AS value_sum FROM item');
+$stmt->execute();
+
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+$sum = $row['value_sum'];
 }
 
 ?>
@@ -36,11 +44,17 @@ $member = $stmt->fetch(PDO::FETCH_ASSOC);
                         </div>
                         <span class="text-muted"><?=$product['Price']?></span>
                     </li>
-
                     <? endforeach; ?>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Total</h6>
+                        </div>
+                        <span class="text-muted"><?=$sum?></span>
+                    </li>
+                </ul>
                 </div>
                     <div class="col-md-8 order-md-1">
-                        <h4 class="mb-3">Billing Address</h4>
+                        <h4 class="mb-3 mt-4">Billing Address</h4>
                         <form>
                             <div class="row">
                             <div class="col-md-6 mb-3">
@@ -78,48 +92,47 @@ $member = $stmt->fetch(PDO::FETCH_ASSOC);
                             </div>
                             <hr class="mb-4">
                             <h4 class="mb-3">Payment Information</h4>
+                            <div class="row">
                                 <div class="col-md-6 mb-3">
-                                <label type="text" id="CardNum" name="CardNum" class="mb-2 mt-2"
-                                    aria-label="Card Number">Card Number</label>
-                                    <input class="form-control" type="text" placeholder="<?=$payment['cardnumber']?>" readonly>
+                                    <label type="text" id="CardType" name="CardType" class="mb-2 mt-2"
+                                        aria-label="CardType">Card Type</label>
+                                        <input class="form-control" type="text" placeholder="<?=$payment['typecard']?>" readonly>
+                                    </div>
+                                <div class="col-md-6 mb-3">
+                                    <label type="text" id="CardNum" name="CardNum" class="mb-2 mt-2"
+                                        aria-label="Card Number">Card Number</label>
+                                        <input class="form-control" type="text" placeholder="<?=$payment['cardnumber']?>" readonly>
+                                    </div>
+                                <div class="col-md-6 mb-3">
+                                    <label type="text" id="CardName" name="CardName" class="mb-2 mt-2"
+                                        aria-label="CardName">Owner Name</label>
+                                        <input class="form-control" type="text" placeholder="<?=$payment['cardname']?>" readonly>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 mb-3">
+                                <label type="text" id="SecurityCode" name="SecurityCode" class="mb-2 mt-2"
+                                    aria-label="SecurityCode">CVC</label>
+                                    <input class="form-control" type="text" placeholder="<?=$payment['securitycode']?>" readonly>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                <label type="text" id="month" name="month" class="mb-2 mt-2"
+                                    aria-label="month">Month</label>
+                                    <input class="form-control" type="text" placeholder="<?=$payment['month']?>" readonly>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                <label type="text" id="year" name="year" class="mb-2 mt-2"
+                                    aria-label="year">Year</label>
+                                    <input class="form-control" type="text" placeholder="<?=$payment['year']?>" readonly>
                                 </div>
                             </div>
-                        </form>
-
-            </div>
-                
-                
-            </div>
-            <div class="row">
-                <div class="mt-4">
-                    <h2>Payment Information</h2>
-                    <hr> 
-                    <div class="col-xs-8">
-                        
-                    
-            </div>
-            <div class="form-row">
-                <div class="col-xs-8">
-                    <label type="text" id="NameDisp" name="NameDisp" class="mb-2 mt-2"
-                        aria-label="NameDisp">Name Displayed : <?=$member['cardname']?></label>
+                                
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-4">
-                            <label type="text" class="" id="CVC" name="CVC">CVC : <?=$member['securitycode']?></label>
-                        </div>
-                        <div class="form-group col-4">
-                            <label id="Month" name="Month" class="">MM : <?=$member['month']?>
-                            </label>
-                        </div>
-                        <div class="form-group col-4">
-                            <label type="text" class="mb-4" id="Year" name="Year">YYYY : <?=$member['year']?></label>
-                        </div>
-                    </div>
+                    </form>
                 </div>
-            </div> 
-        </div>
-        <a type="button" class="btn btn-outline-primary m-4" name="back" id="back" href="Index.php?page=Cart&Id=$Id">Back</a>
+                <a type="button" class="btn btn-danger m-4" name="back" id="back" href="Index.php?page=Cart&Id=$Id">Back</a>
+                <a type="button" align="end" class="btn btn-success m-4" name="Pay" id="Pay" href="Index.php?">Pay &#187;</a>
+            </div>
     </div>
 </div>
 
