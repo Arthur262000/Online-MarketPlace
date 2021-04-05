@@ -9,7 +9,6 @@ if (!$Id) {
     $name = $_POST['Name'];
     $cat = $_POST['Category'];
     $sub = $_POST['subcategory'];
-
     $description = $_POST['Description'];
     $price = $_POST['Price'];
     $option1 = $_POST['option1'];
@@ -40,14 +39,15 @@ if (!$Id) {
         }
     }
 
-    $photo = addslashes(file_get_contents($_FILES['photo']['tmp_name']));
+    $photo = $_FILES['Photo']['tmp_name'];
+    $photo = base64_encode(file_get_contents(addslashes($photo)));
 
-    $date = date('Y/m/d');
+    $date = date("Y-m-d H:i:s");
 
 
 
     $query = "INSERT INTO item (Name_, Category, SubCategory, Idsell, Description, SellOption, Price, Available,Photo, Date_Added)
-     values ('$name', '$cat', '$sub', '$Id', '$description', $option, $price, true, $photo, $date);";
+     values ('$name', '$cat', '$sub', '$Id', '$description', $option, $price, true, '$photo', '$date');";
 
     if (!$mysqli) {
         echo "Database Connection Error..." . mysqli_connect_error();
@@ -60,5 +60,5 @@ if (!$Id) {
         } else {
             echo "Error: " ;
         }
-    }
+    } 
 }

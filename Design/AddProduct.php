@@ -58,7 +58,7 @@ if (!$Id) {
                 <div class="MediumContainer containerItems mt-4 mb-4 pt-4 pb-4">
                     <h2 align="center">Add a Product</h2>
                     <hr>
-                    <form action="insertproduct.php?Id=$Id" method="POST">
+                    <form action="insertproduct.php?Id=$Id" method="POST" enctype="multipart/form-data">
                         <div class="row">
                             <div class="form-group col-4">
                                 <input type="text" id="Name" name="Name" class="form-control mb-4 mt-4" placeholder="Name"
@@ -84,7 +84,7 @@ if (!$Id) {
                         </div>
                         <div class="form-row">
                             <div class="form-group col-auto">
-                                <input type="file" class="form-control" id="Photo" name="Photo"/>
+                                <input type="file" class="form-control" id="Photo" name="Photo" />
                             </div>
                         </div>
                         <div class="form-row">

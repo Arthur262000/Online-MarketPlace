@@ -32,7 +32,7 @@ if (!$Id) {
                         <div class="profile mt-4">
                             <h2>Information</h2>
                             <hr>
-                            <form action="insertcard.php" method="POST">
+                            <form action="insertcard.php?Id=$a" method="POST">
                                 <div class="form-row">
                                     <strong>Select Your Payment Method</strong>
                                     <div class="btn-group paymentBtnGroup btn-group-justified" data-toggle="buttons">
