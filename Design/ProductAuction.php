@@ -41,6 +41,7 @@ if (isset($_GET['id'])) {
                     <div class="col-6 text-center">
                     <h5>Price<?//=$product['price']?> &dollar;</h5>
                     <input type="text" class="form-control mt-3" name="bid" id="bid" placeholder="Bid"></input>
+                    <input type="text" class="form-control mt-3" name="AutoMaxbid" id="AutoMaxbid" placeholder="Maximum Bid"></input>
                     </div>
                     <div class="col-6">
                     <button type="submit" class="btn btn-outline-primary btn-lg mt-3 p-3">Add to Cart <img src="../Design/cart.svg"></button>
