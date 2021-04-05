@@ -38,7 +38,7 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="row m-2">
         <?php foreach ($recently_added_products as $product): ?>
           <div class="col-3 Item mb-4">
-        <a href="index.php?page=product&id=<?=$product['Id']?>">
+        <a href="index.php?page=product&IdItem=<?=$product['Id']?>&Id=<?=$Id?>">
             <img src="Images/<?=$product['Photo']?>" alt="<?=$product['Name_']?>" class="colItems" width="200" height="200">
             <h3 class="name"><?=$product['Name_']?></h3>
             <span class="price">

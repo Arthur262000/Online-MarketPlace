@@ -118,7 +118,7 @@ if (!$Id) {
                                                 </a>
                                             </td>
                                             <td>
-                                                <a href="index.php?page=product&id=$idpro&Id=$Id"> $name </a>
+                                                <a href="index.php?page=product&IdItem=$idtmp&Id=$Id"> $name </a>
                                                 <br>
                                                 <a href="index.php?page=remove&Idr=$Idcart&Id=$Id" class="remove">Remove</a>
                                             </td>

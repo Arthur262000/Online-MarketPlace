@@ -126,8 +126,8 @@ $sum = $row['value_sum'];*/
                         </div>
                     </form>
                 </div>
-                <a type="button" class="btn btn-danger m-4" name="back" id="back" href="Index.php?page=Cart&Id=$Id">Back</a>
-                <a type="button" align="end" class="btn btn-success m-4" name="Pay" id="Pay" href="Index.php?">Pay &#187;</a>
+                <a type="button" class="btn btn-danger m-4" name="back" id="back" href="Index.php?page=Cart&<?=$Id?>">Back</a>
+                <a type="button" align="end" class="btn btn-success m-4" name="Pay" id="Pay" href="Index.php?page=removedb&Id=<?=$Id?>">Pay &#187;</a>
             </div>
     </div>
 </div>
